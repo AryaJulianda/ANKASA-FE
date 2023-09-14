@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="fixed top-0 left-0 right-0">
+      <div className="fixed top-0 left-0 right-0 z-50">
         <main className="flex bg-white items-center py-8 justify-around shadow-lg / max-xl:py-4 / max-sm:py-4 max-sm:justify-between max-sm:px-5">
 
           <section>
@@ -95,7 +95,7 @@ const Navbar = () => {
       </div>
 
       {findTicketVisible && (
-      <div className='fixed top-24 right-96 flex flex-col w-96 bg-white shadow-2xl px-10 py-8 gap-4 rounded-xl my-10 mx-auto / max-xl:top-16 max-xl:right-60 max-xl:py-8 max-xl:px-6 max-xl:h-3/4 max-xl:overflow-y-scroll / max-sm:top-24 max-sm:right-0 max-sm:left-0 max-sm:w-5/6'>
+      <div className='fixed top-24 right-96 flex flex-col w-96 bg-white shadow-2xl px-10 py-8 gap-4 rounded-xl my-10 mx-auto / max-xl:top-16 max-xl:right-60 max-xl:py-8 max-xl:px-6 max-xl:h-3/4 max-xl:overflow-y-scroll / max-sm:top-24 max-sm:right-0 max-sm:left-0 max-sm:w-5/6 z-50'>
         <p className="text-base font-medium">Hey, <br/>Where you want to go?</p>
         
         <button className="flex flex-row justify-between w-full">

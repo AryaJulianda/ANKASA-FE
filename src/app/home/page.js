@@ -13,7 +13,7 @@ const Home = () => {
           <p className='text-[#979797] font-normal text-lg'>and explore the world with us</p>
         </div>
         <div className='bg-[url("/japan.jpg")] w-[1094px] bg-cover h-[500px] bg-no-repeat rounded-3xl -ml-60 bg-center'/>
-        <Image src="/cloud-blue.svg" width={1} height={1} className='w-52 absolute right-10 top-[600px]' />
+        <Image src="/cloud-blue.svg" width={1} height={1} className='w-52 absolute right-10 top-[600px] -z-20' />
 
         {/* trending */}
         <div className='py-16 '>

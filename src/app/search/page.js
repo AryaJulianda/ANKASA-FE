@@ -1,6 +1,7 @@
 "use client"
 
 import Footer from '@/components/Footer';
+import MultiRangeSlider from '@/components/MultiRangeSlider';
 import Navbar from '@/components/Navbar'
 import Image from 'next/image';
 import { useState } from 'react';
@@ -12,6 +13,7 @@ const Search = () => {
   const [openDepTime,setOpenDepTime] = useState(false)
   const [openAriveTime,setOpenAriveTime] = useState(false)
   const [openAirlines,setOpenAirlines] = useState(false)
+  const [openTicketPrice,setOpenTicketPrice] = useState(false)
 
   const handleOpenDropdown = (state,setState) => {
     setState(!state)
@@ -22,7 +24,7 @@ const Search = () => {
       <Navbar/>
       <main className='pt-28 '>
         {/* bluebox */}
-        <div className='bg-primary py-10 px-16 flex flex-row items-center rounded-b-3xl'>
+        <div className='bg-primary py-10 px-16 flex flex-row items-center rounded-b-3xl shadow-2xl'>
           {/* plane */}
           <Image src="/logo-w1.svg" width={50} height={50} className='mr-5'></Image>
           {/* from to */}
@@ -49,14 +51,14 @@ const Search = () => {
         <div className='bg-[#F5F6FA] w-full px-16 flex flex-row gap-6'>
           
           {/* filter */}
-          <div className=' w-[30%]'>
+          <div className=' w-[30%] py-5'>
             {/* head filter */}
-            <div className='flex flex-row justify-between py-5'>
+            <div className='flex flex-row justify-between'>
               <h2 className='font-semibold text-2xl'>Filter</h2>
               <button className='text-primary text-base font-semibold'>Reset</button>
             </div> 
             {/* filter column */}
-            <div className='w-full px-7 bg-white rounded-xl'>
+            <div className='w-full px-7 my-5 bg-white rounded-xl shadow-xl'>
               
               <div className='border-b'>{/* transit */}
                 <button className='flex flex-row justify-between w-full py-5 pr-[3px]' onClick={()=>handleOpenDropdown(openTransit,setOpenTransit)}>
@@ -156,6 +158,25 @@ const Search = () => {
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
                     <label className='text-sm' for='lionAir' >Lion Air</label><input type="checkbox" name="" id="lionAir" className='w-4 h-4'/>
                   </div>
+                </div>}
+              </div>
+
+              <div className='border-b'>{/* Ticket Price */}
+                <button className='flex flex-row justify-between w-full py-5 pr-[3px]' onClick={()=>handleOpenDropdown(openTicketPrice,setOpenTicketPrice)}>
+                  <p className='text-base font-semibold'>Ticket Price</p>
+                  <Image src='/arrow.svg' width={10} height={10} className={openTicketPrice ? '-rotate-90' : 'rotate-90'}></Image>
+                </button>
+                {openTicketPrice && 
+                <div className='flex flex-col'>
+                  <div className='flex flex-row justify-between'>
+                    <p className='color-41 text-xs'>Lowest</p>
+                    <p className='color-41 text-xs'>Highest</p>
+                  </div>
+                  <MultiRangeSlider
+                    min={0}
+                    max={1000}
+                    onChange={({ min, max }) => {return {min,max}}}
+                  />
                 </div>}
               </div>
 
