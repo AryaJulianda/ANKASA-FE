@@ -68,13 +68,13 @@ const Search = () => {
                 {openTransit && 
                 <div className='flex flex-col'>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='direct' >Direct</label><input type="checkbox" name="" id="direct" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='direct' >Direct</label><input type="checkbox" name="" id="direct" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='transit' >Transit</label><input type="checkbox" name="" id="transit" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='transit' >Transit</label><input type="checkbox" name="" id="transit" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='transit2' >Transit 2+</label><input type="checkbox" name="" id="transit2" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='transit2' >Transit 2+</label><input type="checkbox" name="" id="transit2" className='w-4 h-4'/>
                   </div>
                 </div>}
               </div>
@@ -87,13 +87,13 @@ const Search = () => {
                 {openFacilities && 
                 <div className='flex flex-col'>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='luggage' >Luggage</label><input type="checkbox" name="" id="luggage" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='luggage' >Luggage</label><input type="checkbox" name="" id="luggage" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='meal' >In-Flight Meal</label><input type="checkbox" name="" id="meal" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='meal' >In-Flight Meal</label><input type="checkbox" name="" id="meal" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='wifi' >Wi-fi</label><input type="checkbox" name="" id="wifi" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='wifi' >Wi-fi</label><input type="checkbox" name="" id="wifi" className='w-4 h-4'/>
                   </div>
                 </div>}
               </div>
@@ -106,16 +106,16 @@ const Search = () => {
                 {openDepTime && 
                 <div className='flex flex-col'>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='0-6' >00:00 - 06:00</label><input type="checkbox" name="" id="0-6" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='0-6' >00:00 - 06:00</label><input type="checkbox" name="" id="0-6" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='6-12' >06:00 - 12:00</label><input type="checkbox" name="" id="6-12" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='6-12' >06:00 - 12:00</label><input type="checkbox" name="" id="6-12" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='12-18' >12:00 - 18:00</label><input type="checkbox" name="" id="12-18" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='12-18' >12:00 - 18:00</label><input type="checkbox" name="" id="12-18" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='18-24' >18:00 - 24:00</label><input type="checkbox" name="" id="18-24" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='18-24' >18:00 - 24:00</label><input type="checkbox" name="" id="18-24" className='w-4 h-4'/>
                   </div>
                 </div>}
               </div>
@@ -128,16 +128,16 @@ const Search = () => {
                 {openAriveTime && 
                 <div className='flex flex-col'>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='0-6' >00:00 - 06:00</label><input type="checkbox" name="" id="0-6" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='0-6' >00:00 - 06:00</label><input type="checkbox" name="" id="0-6" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='6-12' >06:00 - 12:00</label><input type="checkbox" name="" id="6-12" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='6-12' >06:00 - 12:00</label><input type="checkbox" name="" id="6-12" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='12-18' >12:00 - 18:00</label><input type="checkbox" name="" id="12-18" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='12-18' >12:00 - 18:00</label><input type="checkbox" name="" id="12-18" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='18-24' >18:00 - 24:00</label><input type="checkbox" name="" id="18-24" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='18-24' >18:00 - 24:00</label><input type="checkbox" name="" id="18-24" className='w-4 h-4'/>
                   </div>
                 </div>}
               </div>
@@ -150,13 +150,13 @@ const Search = () => {
                 {openAirlines && 
                 <div className='flex flex-col'>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='garudaId' >Garuda Indonesia</label><input type="checkbox" name="" id="garudaId" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='garudaId' >Garuda Indonesia</label><input type="checkbox" name="" id="garudaId" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='airAsia' >Air Asia</label><input type="checkbox" name="" id="airAsia" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='airAsia' >Air Asia</label><input type="checkbox" name="" id="airAsia" className='w-4 h-4'/>
                   </div>
                   <div className='flex flex-row justify-between w-full items-center mb-5'>
-                    <label className='text-sm' for='lionAir' >Lion Air</label><input type="checkbox" name="" id="lionAir" className='w-4 h-4'/>
+                    <label className='text-sm' htmlFor='lionAir' >Lion Air</label><input type="checkbox" name="" id="lionAir" className='w-4 h-4'/>
                   </div>
                 </div>}
               </div>

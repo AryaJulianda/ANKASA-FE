@@ -69,7 +69,7 @@ const Detail = () => {
                     <div>
                       <label
                         className="text-[#595959] text-sm font-semibold inline-block mx-4 hover:cursor-pointer"
-                        for="flexSwitchCheckDefault">
+                        htmlFor="flexSwitchCheckDefault">
                         Same as contact person
                         </label>
                       <input
