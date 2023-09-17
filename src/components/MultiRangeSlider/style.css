@@ -102,3 +102,17 @@
   pointer-events: all;
   position: relative;
 }
+
+@media not all and (min-width: 1280px) {
+  .thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 230px;
+    outline: none;
+  }
+  .slider {
+    position: relative;
+    width: 230px;
+  }
+}

@@ -48,3 +48,29 @@ body {
 .remove-arrow {
     -moz-appearance: textfield;
 }
+
+/* width */
+::-webkit-scrollbar {
+  /* width: 0px; */
+  height: 15px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 100px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 100px;
+  border:3px #fff solid;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2395FF;
+}

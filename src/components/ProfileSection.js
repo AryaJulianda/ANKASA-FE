@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const ProfileSection = (props) => {
   return (
-    <div className="w-[30%] bg-white p-7 rounded-xl shadow-xl flex flex-col items-center gap-6">
+    <div className="min-w-[30%] bg-white p-7 rounded-xl shadow-xl flex flex-col items-center gap-6 // max-sm:w-full">
       {/* Photo Profile */}
       <Image src='/nico.jpg' width={135} height={135} alt="Photo Profile" className="mt-2 rounded-full ring-2 ring-primary border-2 border-white"/>
       {/* Select Photo Button */}
-      <button className="text-primary text-base font-bold py-3 px-6 rounded-xl border-2 border-primary hover:shadow-md hover:shadow-primary">Select Photo</button>
+      <button className="text-primary text-base font-bold py-2 px-6 rounded-xl border-2 border-primary hover:shadow-md hover:shadow-primary">Select Photo</button>
       {/* Profile info*/}
       <div>
         <p className="font-semibold text-xl mb-2">Mike Kowalski</p>

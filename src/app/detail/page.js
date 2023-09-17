@@ -5,26 +5,26 @@ import Image from 'next/image';
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/high-res.css'
 import SelectCountry from '@/components/SelectCountry';
+import FlightDetails from '@/components/FlightDetails';
 
 const Detail = () => {
 
   return (
     <div>
       <Navbar/>
-      <main className='pt-28 bg-[#F5F6FA]'>
+      <main className='pt-28 bg-[#F5F6FA] // max-xl:pt-20 // max-sm:pt-10'>
         {/* bluebox */}
-        <div className='bg-primary py-10 px-16 flex flex-row items-center rounded-b-3xl shadow-2xl h-44 absolute right-0 left-0 w-full'>
+        <div className='bg-primary py-10 px-16 flex flex-row items-center rounded-b-3xl shadow-2xl h-44 absolute right-0 left-0 w-full // max-sm:rounded-b-2xl max-sm:h-28'>
         </div>
 
         {/* main */}
-        <div className='w-full px-16 py-5 flex flex-row gap-6 z-10 relative'>
-          
+        <div className='w-full px-16 py-5 flex flex-row gap-6 z-10 relative // max-xl:px-8 max-xl:gap-3 // max-sm:flex-col-reverse max-sm:px-4'>
           {/* Details */}
-          <div className=' w-[70%] py-5'>
+          <div className=' w-[70%] py-5 // max-sm:w-full'>
             {/* Person Details */}
             <div className='flex flex-col'>
-              <h2 className='font-semibold text-2xl text-white'>Contact Person Details</h2>
-              <div className='w-full px-7 py-7 my-6 bg-white rounded-xl shadow-xl'>
+              <h2 className='font-semibold text-2xl text-white // max-sm:text-primary'>Contact Person Details</h2>
+              <div className='w-full px-7 py-7 my-6 bg-white rounded-xl shadow-xl // max-xl:px-5 // max-sm:px-4 max-sm:py-4'>
                 <form className='flex flex-col gap-5'>
                   <div>
                     <label htmlFor="name" className='block text-primary text-sm px-4'>Full Name</label>
@@ -56,19 +56,20 @@ const Detail = () => {
                 </form>
               </div>
             </div>
+            {/* Passengger Detail */}
             <div className='flex flex-col'>
               {/* header */}
               <h2 className='font-semibold text-2xl text-black'>Passengger Details</h2>
               {/* form */}
-              <div className='w-full px-7 py-8 my-6 bg-white rounded-xl shadow-xl'>
+              <div className='w-full px-7 py-8 my-6 bg-white rounded-xl shadow-xl // max-xl:px-5 // max-sm:px-4 max-sm:py-4 '>
                 <form className='flex flex-col gap-5'>
 
                   {/* same contact toggle */}
-                  <div className='flex flex-row gap-4 py-4 px-5 bg-sky-100 rounded-xl justify-between'>
-                    <p className='text-[#595959] text-sm font-semibold'>Passenger : 1 Adult</p>          
-                    <div>
+                  <div className='flex flex-row gap-4 py-4 px-5 bg-sky-100 rounded-xl justify-between // max-sm:flex-col'>
+                    <p className='text-[#595959] text-sm font-semibold '>Passenger : 1 Adult</p>          
+                    <div className='flex flex-row justify-between'>
                       <label
-                        className="text-[#595959] text-sm font-semibold inline-block mx-4 hover:cursor-pointer"
+                        className="text-[#595959] text-sm font-semibold inline-block mx-4 hover:cursor-pointer // max-sm:mx-0 max-sm:mr-4"
                         htmlFor="flexSwitchCheckDefault">
                         Same as contact person
                         </label>
@@ -113,7 +114,7 @@ const Detail = () => {
               {/* header */}
               <h2 className='font-semibold text-2xl text-black'>Insurance</h2>
               {/* form */}
-              <div className='w-full px-7 py-8 my-6 bg-white rounded-xl shadow-xl'>
+              <div className='w-full px-7 py-8 my-6 bg-white rounded-xl shadow-xl // max-xl:px-5 // max-sm:px-4 max-sm:py-4'>
                 <form className='flex flex-col gap-5'>
 
                   {/* insurence check */}
@@ -134,55 +135,12 @@ const Detail = () => {
 
 
           </div>
-
           {/* Flight Details */}
-          <div className='w-[30%] flex flex-col gap-5 py-5'>
-            {/* head */}
-            <div className='flex flex-row justify-between'>
-              <h2 className='font-semibold text-2xl text-white'>Flight Details</h2>
-              <button className='text-base font-semibold text-white'>View Details</button>
-            </div>
-            {/* main */}
-            <div className='w-full p-7 bg-white rounded-xl shadow-xl flex flex-col gap-5'>
-              {/* maskapai name */}
-              <div className='w-full rounded-2xl flex flex-row items-center gap-7'>
-                <Image src='/garuda.jpg' width={100} height={100}/>
-                <p className='font-semibold text-base text-41'>Garuda Indonesia</p>
-              </div>
-              {/* from to */}
-              <div className='w-full'>
-                <div className="flex flex-row justify-between">
-                  <h1 className="text-lg font-semibold text-black">Medan ( IDN )</h1>
-                  <Image src='/plane.svg' width={17} height={17} className='mb-2'/>
-                  <h1 className="text-lg font-semibold text-black">Tokyo ( JPN )</h1>
-                </div>
-                <p className='font-thin text-sm text-41 mt-5'>Monday, 20 July 2023 <span className='text-41 mx-2'>●</span> 12:33 - 15:21</p>
-              </div>
-              {/* checklist */}
-              <div>
-                <div className='mb-2'>
-                  <Image src='/checklist.svg' width={20} height={20} className='inline-block'></Image>
-                  <p className='text-primary font-medium text-sm inline-block px-2'>Refundable</p>
-                </div>
-                <div className='mb-2'>
-                  <Image src='/checklist.svg' width={20} height={20} className='inline-block'></Image>
-                  <p className='text-primary font-medium text-sm inline-block px-2'>Can reschedule</p>
-                </div>
-              </div>
-              {/* total payment */}
-              <div className='flex flex-row border-t-2  pt-5'>
-                <p className='font-medium text-lg flex-1'>Total Payment</p>
-                <p className='text-primary font-semibold text-2xl mr-3'>$ 145,00</p>
-                <Image src='/arrow.svg' width={12} height={12} className='rotate-90'/>
-              </div>
-            </div>
-
-          </div>
-
+           <FlightDetails />
         </div>
         
         <div className='flex justify-center'>
-          <button className=' mb-10 text-white bg-primary font-bold text-lg py-4 px-14 rounded-xl shadow-lg shadow-primary'>Procesed to Payment</button>
+          <button className=' mb-10 -mt-5 text-white bg-primary font-bold text-lg py-4 px-14 rounded-xl shadow-lg shadow-primary'>Procesed to Payment</button>
         </div>
         
       </main>

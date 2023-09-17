@@ -6,14 +6,19 @@ const Home = () => {
   return (
     <div>
       <Navbar/>
-      <main className='pt-28 px-32'>
+      <main className='pt-28 px-32 max-xl:px-16 max-xl:pt-20 max-sm:px-4 max-sm:pt-10'>
         {/* header */}
-        <div className='py-20'>
-          <h1 className='text-5xl text-41 font-semibold'>Find your <span className='text-primary'>Flight</span></h1>
-          <p className='text-[#979797] font-normal text-lg'>and explore the world with us</p>
+        <div className='py-10 max-sm:hidden'>
+          <h1 className='text-5xl leading-snug text-41 font-semibold max-sm:text-center'>Find your <span className='text-primary'>Flight</span></h1>
+          <p className='text-[#979797] font-normal text-lg max-sm:text-center'>and explore the world with us</p>
         </div>
-        <div className='bg-[url("/japan.jpg")] w-[1094px] bg-cover h-[500px] bg-no-repeat rounded-3xl -ml-60 bg-center'/>
-        <Image src="/cloud-blue.svg" width={1} height={1} className='w-52 absolute right-10 top-[600px] -z-20' />
+        <div className='bg-[url("/japan.jpg")] w-[1094px] max-sm:w-full bg-cover h-[500px] bg-no-repeat rounded-3xl -ml-60 max-sm:m-0 bg-center max-sm:mt-10'>
+          <div className='py-5 hidden max-sm:flex z-50 w-full h-full flex-col justify-center items-center bg-gradient-to-br from-[#000000bd] to-[#00000052] rounded-3xl'>
+            <h1 className='text-5xl leading-snug text-white font-semibold max-sm:text-center'>Find your <span className='text-primary'>Flight</span></h1>
+            <p className='text-white font-normal text-lg max-sm:text-center'>and explore the world with us</p>
+          </div>
+        </div>
+        <Image src="/cloud-blue.svg" width={1} height={1} className='w-52 absolute right-10 top-[600px] -z-20 max-xl:hidden' />
 
         {/* trending */}
         <div className='py-16 '>
@@ -28,8 +33,8 @@ const Home = () => {
             </div>
           </div>
           {/* list trending */}
-          <div className='flex flex-row gap-6 w-full'>
-            <div className='w-full h-64 p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+          <div className='flex flex-row gap-5 overflow-x-scroll w-full justify-between pb-10'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -39,7 +44,7 @@ const Home = () => {
                 <Image src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='w-full h-64 p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -49,7 +54,7 @@ const Home = () => {
                 <Image src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='w-full h-64 p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -59,7 +64,7 @@ const Home = () => {
                 <Image src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='w-full h-64 p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -69,7 +74,57 @@ const Home = () => {
                 <Image src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='w-full h-64 p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+              <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
+              <div className='flex flex-row justify-between'>
+                <div>
+                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
+                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
+                </div>
+                <Image src='/more.svg' width={30} height={30} className=''/>
+              </div>
+            </div>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+              <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
+              <div className='flex flex-row justify-between'>
+                <div>
+                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
+                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
+                </div>
+                <Image src='/more.svg' width={30} height={30} className=''/>
+              </div>
+            </div>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+              <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
+              <div className='flex flex-row justify-between'>
+                <div>
+                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
+                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
+                </div>
+                <Image src='/more.svg' width={30} height={30} className=''/>
+              </div>
+            </div>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+              <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
+              <div className='flex flex-row justify-between'>
+                <div>
+                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
+                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
+                </div>
+                <Image src='/more.svg' width={30} height={30} className=''/>
+              </div>
+            </div>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+              <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
+              <div className='flex flex-row justify-between'>
+                <div>
+                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
+                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
+                </div>
+                <Image src='/more.svg' width={30} height={30} className=''/>
+              </div>
+            </div>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -83,7 +138,7 @@ const Home = () => {
         </div>
 
         {/* top destination */}
-        <div className='bg-primary rounded-3xl w-full flex flex-col items-center py-14'>
+        <div className='bg-primary rounded-3xl w-full flex flex-col items-center py-14 px-10'>
           {/* header */}
           <div>
             <h5 className='text-center text-white text-sm font-medium'>Top 10</h5>
@@ -91,7 +146,27 @@ const Home = () => {
           </div>
 
           {/* list */}
-          <div className='flex flex-row justify-between py-12 gap-5'>
+          <div className='flex flex-row justify-between py-12 gap-5 overflow-x-scroll w-full'>
+            {/* list item */}
+            <div>
+              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
+            </div>
+            {/* list item */}
+            <div>
+              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
+            </div>
+            {/* list item */}
+            <div>
+              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
+            </div>
+            {/* list item */}
+            <div>
+              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
+            </div>
             {/* list item */}
             <div>
               <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
@@ -120,14 +195,14 @@ const Home = () => {
           </div>
 
           {/* pagination */}
-          <div className='flex flex-row justify-center gap-7'>
-            <button className='bg-primary rounded-md border-2 border-white flex justify-center items-center py-3 pr-7 pl-6 shadow-xl'>
+          {/* <div className='flex flex-row justify-center gap-7'>
+            <button  id='prev' className='bg-primary rounded-md border-2 border-white flex justify-center items-center py-3 pr-7 pl-6 shadow-xl'>
               <Image src='/arrow-w.svg' width={15} height={15} className='rotate-180'/>
             </button>
-            <button className='bg-white rounded-md flex justify-center items-center py-3 pr-7 pl-6 shadow-xl'>
+            <button id='next' className='bg-white rounded-md flex justify-center items-center py-3 pr-7 pl-6 shadow-xl'>
               <Image src='/arrow.svg' width={15} height={15} className=''/>
             </button>
-          </div>
+          </div> */}
         </div>
 
       </main>
