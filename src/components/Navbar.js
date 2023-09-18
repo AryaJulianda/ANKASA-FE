@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
 
@@ -19,6 +20,13 @@ const Navbar = () => {
 
   const toggleFindTicket = () => {
     setFindTicketVisible(!findTicketVisible);
+  }
+
+  const router = useRouter()
+  const handleLogout = () => {
+    localStorage.removeItem("access_token");
+    router.push('/auth/login')
+
   }
 
   return (
@@ -88,7 +96,7 @@ const Navbar = () => {
               <button className="text-base font-bold text-41">Profile</button>
             </div>
             <div className="border-b-2 border-gray-200 w-full text-center p-5"> 
-              <button className="text-base font-bold text-red-500">Logout</button>
+              <button className="text-base font-bold text-red-500" onClick={handleLogout}>Logout</button>
             </div>
           </div>
         </div>)}
