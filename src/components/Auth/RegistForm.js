@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const RegistForm = (props) => {
 
@@ -41,7 +42,8 @@ const RegistForm = (props) => {
       formData.append("name", name);
       formData.append("email", email);
       formData.append("password", password);
-
+      
+      const loading = toast.loading('Waiting...');
       const response = await fetch(`${base_url}/auth/register`, {
         method: "POST",
         headers: {
@@ -49,15 +51,20 @@ const RegistForm = (props) => {
         },
         body: formData.toString(),
       });
+
       const data = await response.json();
       if (response.ok) {
         console.log(data.message,data.data);
+        toast.success('Register Successfully!',{id:loading});
         router.push('/auth/login')
       } else {
-        console.log('Regist Failed : ',data.message)
+        const message = data.message
+        // console.log(`Regist Failed : ${message}`)
+        toast.error(`Regist Failed : ${message}`,{id:loading});
       }
     } catch (error) {
       console.error("Something went wrong:", error);
+      // toast.error(`Regist Failed : ${message}`);
     }
   };
 

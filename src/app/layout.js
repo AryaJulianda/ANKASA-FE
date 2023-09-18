@@ -1,7 +1,8 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
-
-// const poppins = Poppins({ subsets: ['poppins'] })
+import { Suspense } from 'react';
+import { Toaster } from 'react-hot-toast';
+import Loading from './Loading';
 
 const poppins = Poppins({
   weight: ['400','500','600', '700'],
@@ -19,7 +20,18 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       </head>
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+        <Toaster
+          toastOptions={{
+            className: '',
+            style: {
+              padding: '18px 24px',
+              fontSize:'18px'
+            },
+          }}
+        />
+      </body>
     </html>
   )
 }

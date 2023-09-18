@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/navigation'
+import toast from "react-hot-toast";
 
 const LoginForm = (props) => {
   const base_url = 'https://easy-lime-seal-toga.cyclic.app';
@@ -34,6 +35,7 @@ const LoginForm = (props) => {
       formData.append("email", email);
       formData.append("password", password);
 
+      const loading = toast.loading('Waiting...');
       const response = await fetch(`${base_url}/auth/login`, {
         method: "POST",
         headers: {
@@ -41,14 +43,17 @@ const LoginForm = (props) => {
         },
         body: formData.toString(),
       });
+
       const data = await response.json();
       if (response.ok) {
         console.log(data.message,data.data);
         localStorage.setItem("access_token", data.data.access_token);
-        console.log("access_token", data.data.access_token);
+        // console.log("access_token", data.data.access_token);
+        toast.success('Login Successfully!',{id:loading});
         router.push('/')
       } else {
-        console.log('Login Failed : ',data.message)
+        // console.log('Login Failed : ',data.message)
+        toast.error(`Login Failed : ${data.message}`,{id:loading});
       }
     } catch (error) {
       console.error("Something went wrong:", error);
