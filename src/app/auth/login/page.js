@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
+import Hero from "@/components/Hero";
 
 const Page = () => {
 
@@ -15,15 +15,7 @@ const Page = () => {
 
   return (
     <main className="flex min-h-screen flex-row">
-    <hero className="w-3/5 max-xl:w-1/2 max-md:hidden min-h-full bg-primary flex justify-center items-center">
-      <div className='relative'>
-        <Image src="/cloud.svg" className="w-96" width={1} height={1} />
-        <Image src='/logo-w4.svg' className='absolute top-12 right-28 w-10' width={1} height={1}/>
-        <Image src='/logo-w1.svg' className='absolute top-36 right-28 w-52' width={1} height={1}/>
-        <Image src='/logo-w2.svg' className='absolute top-40 right-4 w-16' width={1} height={1}/>
-        <Image src='/logo-w3.svg' className='absolute bottom-4 left-10 w-16' width={1} height={1}/>
-      </div>
-    </hero>
+    <Hero />
     
     <div className='w-2/5 max-xl:w-1/2 max-md:w-full min-h-full flex flex-col justify-center relative px-10 max-sm:px-7 py-10'>
       <div className='flex flex-row max-sm:flex-col max-sm:py-5 py-10 items-center max-sm:justify-center gap-3'>
@@ -32,7 +24,7 @@ const Page = () => {
       </div>
 
       <div className=''>
-        <h1 className='text-4xl max-sm:text-2xl max-sm:text-center font-semibold py-8 text-primary'>Login</h1>
+        <h1 className='text-4xl max-sm:text-2xl max-sm:text-center font-semibold py-8 text-black'>Login</h1>
         <form className='flex flex-col gap-5'>
           <input 
             type="text" name="name" placeholder='Username' 
