@@ -1,8 +1,19 @@
+"use client"
+
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 const Home = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    !localStorage.getItem('access_token')
+    && router.push("/auth/login")
+  }, []);
+
   return (
     <div>
       <Navbar/>
@@ -18,7 +29,7 @@ const Home = () => {
             <p className='text-white font-normal text-lg max-sm:text-center'>and explore the world with us</p>
           </div>
         </div>
-        <Image src="/cloud-blue.svg" width={1} height={1} className='w-52 absolute right-10 top-[600px] -z-20 max-xl:hidden' />
+        <Image alt='' src="/cloud-blue.svg" width={1} height={1} className='w-52 absolute right-10 top-[600px] -z-20 max-xl:hidden' />
 
         {/* trending */}
         <div className='py-16 '>
@@ -41,7 +52,7 @@ const Home = () => {
                   <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
                   <h1 className='font-bold text-2xl text-white'>Japan</h1>
                 </div>
-                <Image src='/more.svg' width={30} height={30} className=''/>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
             <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
@@ -51,7 +62,7 @@ const Home = () => {
                   <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
                   <h1 className='font-bold text-2xl text-white'>Japan</h1>
                 </div>
-                <Image src='/more.svg' width={30} height={30} className=''/>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
             <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
@@ -61,7 +72,7 @@ const Home = () => {
                   <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
                   <h1 className='font-bold text-2xl text-white'>Japan</h1>
                 </div>
-                <Image src='/more.svg' width={30} height={30} className=''/>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
             <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
@@ -71,7 +82,7 @@ const Home = () => {
                   <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
                   <h1 className='font-bold text-2xl text-white'>Japan</h1>
                 </div>
-                <Image src='/more.svg' width={30} height={30} className=''/>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
             <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
@@ -81,7 +92,7 @@ const Home = () => {
                   <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
                   <h1 className='font-bold text-2xl text-white'>Japan</h1>
                 </div>
-                <Image src='/more.svg' width={30} height={30} className=''/>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
             <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
@@ -91,7 +102,7 @@ const Home = () => {
                   <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
                   <h1 className='font-bold text-2xl text-white'>Japan</h1>
                 </div>
-                <Image src='/more.svg' width={30} height={30} className=''/>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
             <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
@@ -101,7 +112,7 @@ const Home = () => {
                   <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
                   <h1 className='font-bold text-2xl text-white'>Japan</h1>
                 </div>
-                <Image src='/more.svg' width={30} height={30} className=''/>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
             <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
@@ -111,7 +122,7 @@ const Home = () => {
                   <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
                   <h1 className='font-bold text-2xl text-white'>Japan</h1>
                 </div>
-                <Image src='/more.svg' width={30} height={30} className=''/>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
             <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
@@ -121,7 +132,7 @@ const Home = () => {
                   <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
                   <h1 className='font-bold text-2xl text-white'>Japan</h1>
                 </div>
-                <Image src='/more.svg' width={30} height={30} className=''/>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
             <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
@@ -131,7 +142,7 @@ const Home = () => {
                   <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
                   <h1 className='font-bold text-2xl text-white'>Japan</h1>
                 </div>
-                <Image src='/more.svg' width={30} height={30} className=''/>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
           </div>
@@ -197,10 +208,10 @@ const Home = () => {
           {/* pagination */}
           {/* <div className='flex flex-row justify-center gap-7'>
             <button  id='prev' className='bg-primary rounded-md border-2 border-white flex justify-center items-center py-3 pr-7 pl-6 shadow-xl'>
-              <Image src='/arrow-w.svg' width={15} height={15} className='rotate-180'/>
+              <Image alt='' src='/arrow-w.svg' width={15} height={15} className='rotate-180'/>
             </button>
             <button id='next' className='bg-white rounded-md flex justify-center items-center py-3 pr-7 pl-6 shadow-xl'>
-              <Image src='/arrow.svg' width={15} height={15} className=''/>
+              <Image alt='' src='/arrow.svg' width={15} height={15} className=''/>
             </button>
           </div> */}
         </div>

@@ -36,14 +36,14 @@ const Navbar = () => {
 
           <section>
             <div className="flex flex-row items-center gap-x-3">
-              <Image src='/logo-b.svg' width={1} height={1} className="w-12 / max-sm:w-8"/>
+              <Image alt="" src='/logo-b.svg' width={1} height={1} className="w-12 / max-sm:w-8"/>
               <h1 className="text-2xl font-semibold text-41 / max-sm:text-xl">Ankasa</h1>
             </div> 
           </section>
 
           <section className="flex flex-row items-center gap-12 / max-sm:hidden ">
             <div className="bg-gray-100 flex flex-row items-center h-fit px-5 py-3 gap-x-3 w-64 rounded-xl shadow-md">
-              <Image src='/search.svg' width={1} height={1} className="w-6"/>
+              <Image alt="" src='/search.svg' width={1} height={1} className="w-6"/>
               <input type="text" placeholder="Where you want to go?" className="text-sm text-gray-500 focus:outline-none bg-transparent"/>
             </div>  
 
@@ -61,23 +61,23 @@ const Navbar = () => {
 
           <section className="flex flex-row items-center gap-10 / max-sm:hidden">
             <div className="flex flex-row gap-10">
-              <Image src='/icon-message.svg' width={24} height={24} className="w-6"/>
-              <Image src='/icon-notification.svg' width={24} height={24} className="w-6"/>
+              <Image alt="" src='/icon-message.svg' width={24} height={24} className="w-6"/>
+              <Image alt="" src='/icon-notification.svg' width={24} height={24} className="w-6"/>
             </div>
 
             <div>
-              <Image src='/nico.jpg' width={56} height={56} className="rounded-full border-2 border-primary p-0.5"/>
+              <Image alt="" src='/nico.jpg' width={56} height={56} className="rounded-full border-2 border-primary p-0.5"/>
             </div>
           </section>
 
           <section className="max-sm:flex flex-row align-center gap-4 hidden">
-            <Image src='/search.svg' width={1} height={1} className="w-5" onClick={toggleSearch}/>
-            <Image src='/hamburger.svg' id="sideBarButton" width={1} height={1} className="w-5" onClick={toggleSidebar}/>
+            <Image alt="" src='/search.svg' width={1} height={1} className="w-5" onClick={toggleSearch}/>
+            <Image alt="" src='/hamburger.svg' id="sideBarButton" width={1} height={1} className="w-5" onClick={toggleSidebar}/>
           </section>
           
           {searchVisible &&(
             <div className="bg-gray-100 flex flex-row items-center h-fit px-4 py-3 gap-x-3 w-64 rounded-xl shadow-md absolute">
-              <Image src='/search.svg' width={1} height={1} className="w-6"/>
+              <Image alt="" src='/search.svg' width={1} height={1} className="w-6"/>
               <input type="text" placeholder="Where you want to go?" className="text-sm text-gray-500 focus:outline-none bg-transparent"/>
             </div>)} 
 
@@ -108,7 +108,7 @@ const Navbar = () => {
         
         <button className="flex flex-row justify-between w-full">
           <p className="text-base text-primary font-semibold">Recently Searched</p>
-          <Image src='/arrow.svg' width={10} height={10}/>
+          <Image alt="" src='/arrow.svg' width={10} height={10}/>
         </button>
 
         <div className="flex flex-row bg-white shadow-lg rounded-xl justify-between px-5 py-3">
@@ -117,7 +117,7 @@ const Navbar = () => {
             <h1 className="text-xl font-semibold text-black">Medan</h1>
             <p className="text-sm font-thin">Indondesia</p>
           </div>
-          <Image src='/switch.svg' width={17} height={17}/>
+          <Image alt="" src='/switch.svg' width={17} height={17}/>
           <div className="text-right">
             <p className="text-sm text-gray-500">To</p>
             <h1 className="text-xl font-semibold text-black">Tokyo</h1>
@@ -131,7 +131,7 @@ const Navbar = () => {
             <p className="text-sm font-semibold text-white">One way</p>
           </button>
           <button className="bg-gray-200 rounded-md flex flex-row justify-center py-3 px-6 gap-3 items-center / max-sm:py-2 max-sm:px-3">
-            <Image src='/roundtrip.svg' width={18} height={18}/>
+            <Image alt="" src='/roundtrip.svg' width={18} height={18}/>
             <p className="text-sm font-semibold text-gray-700">Round trip</p>
           </button>
         </div>
@@ -140,7 +140,7 @@ const Navbar = () => {
           <h5 className="mb-2 text-sm text-gray-500 font-medium">Departure</h5>
           <button className="flex flex-row rounded-xl border border-gray-200 w-full px-5 py-4 justify-between">
             <p className="text-sm font-bold">Monday, 20 July 2020</p>
-            <Image src='/arrow.svg' width={10} height={10}/>
+            <Image alt="" src='/arrow.svg' width={10} height={10}/>
           </button>
         </div>
 
@@ -149,11 +149,11 @@ const Navbar = () => {
           <div className="flex flex-row gap-4">
             <button className="flex flex-row rounded-md border border-gray-200 w-full justify-between p-5 py-3">
               <p className="text-sm font-bold">2 Child</p>
-              <Image src='/arrow.svg' width={10} height={10}/>
+              <Image alt="" src='/arrow.svg' width={10} height={10}/>
             </button>
             <button className="flex flex-row rounded-md border border-gray-200 w-full justify-between p-5 py-3">
               <p className="text-sm font-bold ">2 Adult</p>
-              <Image src='/arrow.svg' width={10} height={10}/>
+              <Image alt="" src='/arrow.svg' width={10} height={10}/>
             </button>
           </div>
         </div>
@@ -178,7 +178,7 @@ const Navbar = () => {
 
         <button className="bg-primary rounded-xl flex flex-row justify-between items-center px-9 py-4 mt-3">
           <p className="text-lg font-bold text-white">SEARCH FLIGHT</p>
-          <Image src='/arrow-w.svg' width={10} height={10}/>
+          <Image alt="" src='/arrow-w.svg' width={10} height={10}/>
         </button>
 
       </div>)}

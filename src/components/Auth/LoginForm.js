@@ -1,9 +1,10 @@
 'use client'
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/navigation'
 import toast from "react-hot-toast";
+import { AuthContext } from "@/context/authContext";
 
 const LoginForm = (props) => {
   const base_url = 'https://easy-lime-seal-toga.cyclic.app';
