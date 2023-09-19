@@ -29,7 +29,7 @@ const Filter = () => {
         <div className='border-b'>{/* transit */}
           <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openTransit,setOpenTransit)}>
             <p className='text-base font-semibold'>Transit</p>
-            <Image src='/arrow.svg' width={10} height={10} className={openTransit ? '-rotate-90' : 'rotate-90'}></Image>
+            <Image alt='' src='/arrow.svg' width={10} height={10} className={openTransit ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
           </button>
           {openTransit && 
           <div className='flex flex-col'>
@@ -48,7 +48,7 @@ const Filter = () => {
         <div className='border-b'>{/* Facilities */}
           <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openFacilities,setOpenFacilities)}>
             <p className='text-base font-semibold'>Facilities</p>
-            <Image src='/arrow.svg' width={10} height={10} className={openFacilities ? '-rotate-90' : 'rotate-90'}></Image>
+            <Image alt='' src='/arrow.svg' width={10} height={10} className={openFacilities ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
           </button>
           {openFacilities && 
           <div className='flex flex-col'>
@@ -67,7 +67,7 @@ const Filter = () => {
         <div className='border-b'>{/* Departure Time */}
           <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openDepTime,setOpenDepTime)}>
             <p className='text-base font-semibold'>Departure Time</p>
-            <Image src='/arrow.svg' width={10} height={10} className={openDepTime ? '-rotate-90' : 'rotate-90'}></Image>
+            <Image alt='' src='/arrow.svg' width={10} height={10} className={openDepTime ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
           </button>
           {openDepTime && 
           <div className='flex flex-col'>
@@ -89,7 +89,7 @@ const Filter = () => {
         <div className='border-b'>{/* Time Arrived */}
           <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openAriveTime,setOpenAriveTime)}>
             <p className='text-base font-semibold'>Time Arrived</p>
-            <Image src='/arrow.svg' width={10} height={10} className={openAriveTime ? '-rotate-90' : 'rotate-90'}></Image>
+            <Image alt='' src='/arrow.svg' width={10} height={10} className={openAriveTime ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
           </button>
           {openAriveTime && 
           <div className='flex flex-col'>
@@ -111,7 +111,7 @@ const Filter = () => {
         <div className='border-b'>{/* Airlines */}
           <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openAirlines,setOpenAirlines)}>
             <p className='text-base font-semibold'>Airlines</p>
-            <Image src='/arrow.svg' width={10} height={10} className={openAirlines ? '-rotate-90' : 'rotate-90'}></Image>
+            <Image alt='' src='/arrow.svg' width={10} height={10} className={openAirlines ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
           </button>
           {openAirlines && 
           <div className='flex flex-col'>
@@ -130,7 +130,7 @@ const Filter = () => {
         <div className='border-b'>{/* Ticket Price */}
           <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openTicketPrice,setOpenTicketPrice)}>
             <p className='text-base font-semibold'>Ticket Price</p>
-            <Image src='/arrow.svg' width={10} height={10} className={openTicketPrice ? '-rotate-90' : 'rotate-90'}></Image>
+            <Image alt='' src='/arrow.svg' width={10} height={10} className={openTicketPrice ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
           </button>
           {openTicketPrice && 
           <div className='flex flex-col'>
