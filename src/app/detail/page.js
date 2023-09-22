@@ -1,4 +1,5 @@
 'use client'
+import { useParams, useRouter } from 'next/navigation';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'
 import Image from 'next/image';
@@ -7,7 +8,9 @@ import 'react-phone-input-2/lib/high-res.css'
 import SelectCountry from '@/components/SelectCountry';
 import FlightDetails from '@/components/FlightDetails';
 
-const Detail = () => {
+const Detail = ({searchParams}) => {
+  const ticket = searchParams;
+  console.log('ticket=>',ticket)
 
   return (
     <div>
@@ -50,7 +53,7 @@ const Detail = () => {
                     />      
                   </div>
                   <div className='flex flex-row gap-4 py-4 px-5 bg-red-100 rounded-xl'>
-                    <Image src='/warning.svg' width={24} height={24}></Image>
+                    <Image alt='' src='/warning.svg' width={24} height={24}></Image>
                     <p className='text-[#595959] text-sm font-semibold'>Make sure the customer data is correct!</p>
                   </div>
                 </form>
@@ -84,8 +87,8 @@ const Detail = () => {
                   {/* Title */}
                   <div>
                     <label htmlFor="title" className='block text-primary text-sm px-4'>Title</label>
-                    <select name="title" id="" className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'>
-                      <option value="Mr" selected>Mr.</option>
+                    <select name="title" id="" defaultValue={'Mr'} className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'>
+                      <option value="Mr">Mr.</option>
                       <option value="Mrs">Mrs.</option>
                     </select>
                   </div>
@@ -136,7 +139,7 @@ const Detail = () => {
 
           </div>
           {/* Flight Details */}
-           <FlightDetails />
+           <FlightDetails ticket={ticket}/>
         </div>
         
         <div className='flex justify-center'>

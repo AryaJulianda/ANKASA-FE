@@ -1,0 +1,157 @@
+  {
+    code: 'bab93da5-9f82-4e81-9aab-ce18cdd31ae1',
+    takeoff: '2023-09-25T12:00:00.000Z',
+    landing: '2023-09-25T15:00:00.000Z',
+    name: 'Garuda Indonesia',
+    photo: 'https://daisycon.io/images/airline/?width=300&height=150&color=ffffff&iata=ga',
+    transit: 0,
+    from: {
+      id: 1,
+      name: 'John F. Kennedy International Airport',
+      code: 'JFK',
+      location: 'New York, USA',
+      terminal: 'Terminal 4',
+      country: 'United States',
+      latitude: 40.6413,
+      longitude: -73.7781
+    },
+    to: {
+      id: 2,
+      name: 'Heathrow Airport',
+      code: 'LHR',
+      location: 'London, UK',
+      terminal: 'Terminal 5',
+      country: 'United Kingdom',
+      latitude: 51.47,
+      longitude: -0.4543
+    },
+    facilities: [ 'baggage', 'meal', 'wifi' ]
+  }
+
+saya memiliki project next js website ticket pesawat,
+Ini adalah kode pada halaman search dimana di halaman ini menjalankan fungsi untuk get semua data tanpa di filter lalu hasilnya akan di tampilkan di komponen SelectTicket.
+bagaimana caranya untuk menjalankan getDataFiltered
+
+  const Search = async () => {
+  const data = await getAllData()
+
+  // console.log('url=>',url)
+  // console.log(data,'data')
+  return (
+    <div>
+      <Navbar/>
+      <main className='pt-28 / max-xl:pt-20 / max-sm:pt-16'>
+        {/* main */}
+        <div className='bg-[#F5F6FA] w-full px-16 relative z-50 flex flex-row gap-6 / max-xl:px-8 max-xl:gap-4 / max-sm:px-4 max-sm:flex-col'>
+          {/* bluebox */}
+          <div className='bg-primary h-24 absolute -z-10 left-0 right-0 rounded-b-3xl shadow-2xl'></div>
+          {/* filter */}
+          <div className='w-[30%] py-5 / max-sm:w-full'>
+            <Filter />
+          </div>
+
+          {/* select ticket */}
+          <SelectTicket tickets={data.data}/>
+        </div>
+      </main>
+      <Footer/>
+    </div>
+  )
+};
+
+const Filter = () => {
+
+  const [openTransit,setOpenTransit] = useState(false)
+  const [openFacilities,setOpenFacilities] = useState(false)
+  const [openDepTime,setOpenDepTime] = useState(false)
+  const [openAriveTime,setOpenAriveTime] = useState(false)
+  const [openAirlines,setOpenAirlines] = useState(false)
+  const [openTicketPrice,setOpenTicketPrice] = useState(false)
+
+  const handleOpenDropdown = (state,setState) => {
+    setState(!state)
+  }
+  return (
+    <div>
+      {/* head filter */}
+      <div className='flex flex-row justify-between'>
+        <h2 className='text-white font-semibold text-2xl / max-xl:text-xl'>Filter</h2>
+        <button className='text-white text-base font-semibold hidden / max-sm:inline-block'>Apply Filter</button>
+      </div> 
+      {/* filter column */}
+      <div className='w-full px-7 my-5 bg-white rounded-xl shadow-xl / max-xl:px-5 max-xl:my-3'>
+        
+        <div className='border-b'>{/* Facilities */}
+          <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openFacilities,setOpenFacilities)}>
+            <p className='text-base font-semibold'>Facilities</p>
+            <Image alt='' src='/arrow.svg' width={10} height={10} className={openFacilities ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
+          </button>
+          {openFacilities && 
+          <div className='flex flex-col'>
+            <div className='flex flex-row justify-between w-full items-center mb-5'>
+              <label className='text-sm' htmlFor='baggage' >Baggage</label><input type="checkbox" name="" id="baggage" className='w-4 h-4'/>
+            </div>
+            <div className='flex flex-row justify-between w-full items-center mb-5'>
+              <label className='text-sm' htmlFor='meal' >Meal</label><input type="checkbox" name="" id="meal" className='w-4 h-4'/>
+            </div>
+            <div className='flex flex-row justify-between w-full items-center mb-5'>
+              <label className='text-sm' htmlFor='wifi' >Wi-fi</label><input type="checkbox" name="" id="wifi" className='w-4 h-4'/>
+            </div>
+          </div>}
+        </div>
+      
+
+        <div className='border-b'>{/* Airlines */}
+          <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openAirlines,setOpenAirlines)}>
+            <p className='text-base font-semibold'>Airlines</p>
+            <Image alt='' src='/arrow.svg' width={10} height={10} className={openAirlines ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
+          </button>
+          {openAirlines && 
+          <div className='flex flex-col'>
+            <div className='flex flex-row justify-between w-full items-center mb-5'>
+              <label className='text-sm' htmlFor='garudaId' >Garuda Indonesia</label><input type="checkbox" name="" id="garudaId" className='w-4 h-4'/>
+            </div>
+            <div className='flex flex-row justify-between w-full items-center mb-5'>
+              <label className='text-sm' htmlFor='airAsia' >Air Asia</label><input type="checkbox" name="" id="airAsia" className='w-4 h-4'/>
+            </div>
+            <div className='flex flex-row justify-between w-full items-center mb-5'>
+              <label className='text-sm' htmlFor='lionAir' >Lion Air</label><input type="checkbox" name="" id="lionAir" className='w-4 h-4'/>
+            </div>
+          </div>}
+        </div>
+
+        <div className='border-b'>{/* Ticket Price */}
+          <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openTicketPrice,setOpenTicketPrice)}>
+            <p className='text-base font-semibold'>Ticket Price</p>
+            <Image alt='' src='/arrow.svg' width={10} height={10} className={openTicketPrice ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
+          </button>
+          {openTicketPrice && 
+          <div className='flex flex-col'>
+            <div className='flex flex-row justify-between'>
+              <p className='color-41 text-xs'>Lowest</p>
+              <p className='color-41 text-xs'>Highest</p>
+            </div>
+            <MultiRangeSlider
+              min={0}
+              max={1000}
+              onChange={({ min, max }) => {return {min,max}}}
+            />
+          </div>}
+        </div>
+
+      </div>
+    </div>
+  )
+};
+
+export async function getDataFiltered({facilities,minPrice,maxPrice,airlineId}) {
+  try {
+    const response = await fetch(url+ `/airlines/flight?facilities=${facilities}&minPrice=${minPrice}&maxPrice=${maxPrice}&airlineId=${airlineId}`); 
+    const data = await response.json();
+    if (!response.ok) { throw new Error('Gagal mengambil data dari server');}
+    // console.log('response=>',data)
+    return NextResponse.json({ data })
+  } catch (error) {
+    console.error('Terjadi kesalahan saat mengambil data:', error);
+  }
+}

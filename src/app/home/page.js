@@ -1,18 +1,9 @@
-"use client"
-
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
 
 const Home = () => {
-  const router = useRouter();
 
-  useEffect(() => {
-    !localStorage.getItem('access_token')
-    && router.push("/auth/login")
-  }, []);
 
   return (
     <div>

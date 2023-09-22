@@ -1,4 +1,3 @@
-import { AuthProvider } from '@/context/authContext'
 import Home from './home/page'
 
 export default function Page() {

@@ -2,7 +2,7 @@ import React from "react"
 
 const SelectCountry = () => {
   return (
-    <select name="country" id="" className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'>
+    <select name="country" id="" defaultValue='indonesia' className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'>
       <option value="">Select Your Nationallity</option>
       <option value="afghan">Afghan</option>
       <option value="albanian">Albanian</option>
@@ -85,7 +85,7 @@ const SelectCountry = () => {
       <option value="hungarian">Hungarian</option>
       <option value="icelander">Icelander</option>
       <option value="indian">Indian</option>
-      <option value="indonesia"selected="selected">Indonesia</option>
+      <option value="indonesia">Indonesia</option>
       <option value="iranian">Iranian</option>
       <option value="iraqi">Iraqi</option>
       <option value="irish">Irish</option>

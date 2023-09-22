@@ -1,15 +1,23 @@
 'use client';
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const Navbar = () => {
 
+  const router = useRouter()
   const [searchVisible,setSearchVisible] = useState(false)
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const [findTicketVisible, setFindTicketVisible] = useState(false);
+  const [accessToken,setAccessToken] = useState('')
 
+  useEffect(() => {
+    setAccessToken(localStorage.getItem('access_token'))
+    // && router.push("/auth/login")
+  }, []);
+
+  // console.log('access token =>',accessToken)
   const toggleSidebar = () => {
     setSidebarVisible(!sidebarVisible);
   }
@@ -22,7 +30,6 @@ const Navbar = () => {
     setFindTicketVisible(!findTicketVisible);
   }
 
-  const router = useRouter()
   const handleLogout = () => {
     localStorage.removeItem("access_token");
     router.push('/auth/login')
@@ -59,7 +66,8 @@ const Navbar = () => {
             </div>
           </section>
 
-          <section className="flex flex-row items-center gap-10 / max-sm:hidden">
+          {accessToken ?
+          (<section className="flex flex-row items-center gap-10 / max-sm:hidden">
             <div className="flex flex-row gap-10">
               <Image alt="" src='/icon-message.svg' width={24} height={24} className="w-6"/>
               <Image alt="" src='/icon-notification.svg' width={24} height={24} className="w-6"/>
@@ -68,7 +76,12 @@ const Navbar = () => {
             <div>
               <Image alt="" src='/nico.jpg' width={56} height={56} className="rounded-full border-2 border-primary p-0.5"/>
             </div>
-          </section>
+          </section>) 
+          :(<button 
+              onClick={()=> router.push('/auth/register')}
+              className="bg-primary text-base font-bold text-white py-3 px-10 rounded-xl hover:text-primary hover:bg-white border-2 border-white hover:border-primary shadow-primary / max-sm:hidden">
+            Sing Up
+          </button>)}
 
           <section className="max-sm:flex flex-row align-center gap-4 hidden">
             <Image alt="" src='/search.svg' width={1} height={1} className="w-5" onClick={toggleSearch}/>
@@ -82,7 +95,8 @@ const Navbar = () => {
             </div>)} 
 
         </main>
-
+        
+        {/* SIDE BAR */}
         {sidebarVisible && (
         <div className='w-2/3 bg-white fixed -z-50 top-0 bottom-0 right-0 shadow-2xl pt-16'>
           <div className='flex flex-col items-center'>
@@ -102,6 +116,7 @@ const Navbar = () => {
         </div>)}
       </div>
 
+      {/* FIND TICKET */}
       {findTicketVisible && (
       <div className='fixed top-24 right-96 flex flex-col w-96 bg-white shadow-2xl px-10 py-8 gap-4 rounded-xl my-10 mx-auto / max-xl:top-16 max-xl:right-60 max-xl:py-8 max-xl:px-6 max-xl:h-3/4 max-xl:overflow-y-scroll / max-sm:top-24 max-sm:right-0 max-sm:left-0 max-sm:w-5/6 z-50'>
         <p className="text-base font-medium">Hey, <br/>Where you want to go?</p>
