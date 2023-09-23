@@ -29,6 +29,33 @@ export async function getDataFiltered(facilities,minPrice,maxPrice,airlineId) {
     console.error('Terjadi kesalahan saat mengambil data:', error);
   }
 }
+ 
+export async function bookingTicket(formData, code) {
+  try {
+    const formDataObject = new FormData();
+    for (const key in formData) {
+      formDataObject.append(key, formData[key]);
+    }
+
+    const res = await fetch(`${url}/booking/tickets/` + code, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
+      },
+      body: new URLSearchParams(formDataObject).toString(),
+    });
+
+    if (!res.ok) {
+      throw new Error('Request failed' + res);
+    }
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error('Error in bookingTicket:', error);
+    throw error; 
+  }
+}
 
  
 // export async function GET(request) {

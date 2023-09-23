@@ -11,7 +11,7 @@ const SelectTicket = ({tickets}) => {
       {/* head st */}
       <div className='flex flex-row justify-between'>
         <h2 className='text-white font-semibold text-2xl / max-xl:text-xl'>Select Ticket</h2>
-        <button className='text-white text-base font-semibold / max-sm:hidden'>Sort By</button>
+        <button className='text-white text-base font-semibold hidden / max-sm:inline-block'>Show Filter</button>
         {/* <button className='text-base font-semibold hidden / max-sm:inline-block' onClick={handleShowFilter}>{showFilter ? `Hide Filter` : `Show Filter`}</button> */}
       </div>
 
@@ -41,7 +41,7 @@ const SelectTicket = ({tickets}) => {
         <div key={ticket.code}>
           <Link href={{ 
             pathname: '/detail', 
-            query: {'code':ticket.code,'name':ticket.name,'photo':ticket.photo,fromCountry,fromCity,toCountry,toCity,toCountry,'takeoff':ticket.takeoff,takeoffHours,takeoffMinutes,landingHours,landingMinutes}
+            query: {'code':ticket.code,'name':ticket.name,'photo':ticket.photo,'price':ticket.price,fromCountry,fromCity,toCountry,toCity,toCountry,'takeoff':ticket.takeoff,takeoffHours,takeoffMinutes,landingHours,landingMinutes}
           }}>
             <div className='bg-white p-7 rounded-2xl shadow-xl flex flex-col gap-2 w-full / max-sm:p-5 max-sm:gap-0'>
               {/* head */}
@@ -55,7 +55,7 @@ const SelectTicket = ({tickets}) => {
               <div className='flex flex-row justify-between items-center // max-sm:flex-wrap'>
                 {/* from to */}
                 <div className='w-fit'>
-                  <div className="flex flex-row justify-between py-3 items-center gap-2">
+                  <div className="flex flex-row justify-between py-3 items-center gap-5">
                     <div className="text-left w-24 ">
                       <h1 className="text-xl font-medium text-black">{fromCity}</h1>
                       <h1 className="text-xl font-medium text-gray-500">{fromCountry}</h1>

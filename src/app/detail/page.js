@@ -7,10 +7,41 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/high-res.css'
 import SelectCountry from '@/components/SelectCountry';
 import FlightDetails from '@/components/FlightDetails';
+import { useState } from 'react';
+import Link from 'next/link';
 
 const Detail = ({searchParams}) => {
   const ticket = searchParams;
-  console.log('ticket=>',ticket)
+
+  const [numberOfPassengers, setNumberOfPassengers] = useState('1');
+  const [price,setPrice] = useState(ticket.price)
+  const [insuranceChecked, setInsuranceChecked] = useState(false);
+  const [passenger, setPassenger] = useState({
+    title1: 'Mr',
+    fullname1: '',
+    nationality1: '',
+    title2: 'Mr',
+    fullname2: '',
+    nationality2: '',
+  });
+
+  const handleChangePassenger = (e) => {
+    const { name, value } = e.target;
+    setPassenger({
+      ...passenger,
+      [name]: value,
+    });
+  };
+  const handleNumberPassengers = (e) => {
+    setNumberOfPassengers(e.target.value);
+    e.target.value == 2 ? setPrice(price*2) : setPrice(price/2)
+  };
+  const handleInsuranceChange = (e) => {
+    const isChecked = e.target.checked;
+    setInsuranceChecked(isChecked);
+    setPrice((prevPrice) => isChecked ? prevPrice + 2 : prevPrice - 2);
+  };
+  // console.log({passenger})
 
   return (
     <div>
@@ -37,9 +68,9 @@ const Detail = ({searchParams}) => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="name" className='block text-primary text-sm px-4'>Email</label>
+                    <label htmlFor="email" className='block text-primary text-sm px-4'>Email</label>
                     <input 
-                      type="text" name="email" placeholder='insert your email address'
+                      type="text" name="email" id='email' placeholder='insert your email address'
                       className='border-b-2 text-black p-4 text-base focus:outline-none focus:border-primary w-full'
                     />         
                   </div>
@@ -69,7 +100,14 @@ const Detail = ({searchParams}) => {
 
                   {/* same contact toggle */}
                   <div className='flex flex-row gap-4 py-4 px-5 bg-sky-100 rounded-xl justify-between // max-sm:flex-col'>
-                    <p className='text-[#595959] text-sm font-semibold '>Passenger : 1 Adult</p>          
+                    <div className='flex flex-row gap-3'>                     
+                      <p className='text-[#595959] text-sm font-semibold '>Passenger</p>   
+                      <p className='text-[#595959] text-sm font-semibold '>:</p>   
+                      <select name="title" id="" value={numberOfPassengers} onChange={handleNumberPassengers} className='bg-transparent border-none outline-none text-[#595959] text-sm font-semibold'>
+                        <option value="1">1 Adult</option>
+                        <option value="2">2 Adult</option>
+                      </select>      
+                    </div>
                     <div className='flex flex-row justify-between'>
                       <label
                         className="text-[#595959] text-sm font-semibold inline-block mx-4 hover:cursor-pointer // max-sm:mx-0 max-sm:mr-4"
@@ -84,10 +122,15 @@ const Detail = ({searchParams}) => {
                     </div>
                   </div>
 
+                  {/* Passengger 1 */}
+                  <p className='text-[#000] text-base font-semibold mx-3'>Passengger 1</p>
                   {/* Title */}
                   <div>
-                    <label htmlFor="title" className='block text-primary text-sm px-4'>Title</label>
-                    <select name="title" id="" defaultValue={'Mr'} className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'>
+                    <label htmlFor="title1" className='block text-primary text-sm px-4'>Title</label>
+                    <select 
+                      name="title1" id="title1" value={passenger.title1} onChange={handleChangePassenger}
+                      className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'
+                    >
                       <option value="Mr">Mr.</option>
                       <option value="Mrs">Mrs.</option>
                     </select>
@@ -95,18 +138,50 @@ const Detail = ({searchParams}) => {
 
                   {/* full name */}
                   <div>
-                    <label htmlFor="name" className='block text-primary text-sm px-4'>Full Name</label>
+                    <label htmlFor="fullname1" className='block text-primary text-sm px-4'>Full Name</label>
                     <input 
-                      type="text" name="name" id='name' placeholder='insert passenger full name' 
+                      value={passenger.fullname1} onChange={handleChangePassenger}
+                      type="text" name="fullname1" id='fullname1' placeholder='insert passenger full name' 
                       className='border-b-2 text-black p-4 text-base focus:outline-none focus:border-primary w-full'
                     />
                   </div>
 
                   {/* Nationallity */}
                   <div>
-                    <label htmlFor="country" className='block text-primary text-sm px-4'>Nationallity</label>
-                    <SelectCountry></SelectCountry>
-                  </div>                  
+                    <label htmlFor="nationality1" className='block text-primary text-sm px-4'>Nationality</label>
+                    <SelectCountry name={'nationality1'} value={passenger.nationality1} onChange={handleChangePassenger}/>
+                  </div>          
+
+                  {/* Passengger 2 */}
+                  {numberOfPassengers == 2 &&(<>
+                  <p className='text-[#000] text-base font-semibold mx-3 mt-5'>Passengger 2</p>
+                  {/* Title */}
+                  <div>
+                    <label htmlFor="title2" className='block text-primary text-sm px-4'>Title</label>
+                    <select 
+                      value={passenger.title2} onChange={handleChangePassenger}
+                      name="title2" id="title2" className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'
+                    >
+                      <option value="Mr">Mr.</option>
+                      <option value="Mrs">Mrs.</option>
+                    </select>
+                  </div>
+
+                  {/* full name */}
+                  <div>
+                    <label htmlFor="fullname2" className='block text-primary text-sm px-4'>Full Name</label>
+                    <input 
+                      value={passenger.fullname2} onChange={handleChangePassenger}
+                      type="text" name="fullname2" id='fullname2' placeholder='insert passenger full name' 
+                      className='border-b-2 text-black p-4 text-base focus:outline-none focus:border-primary w-full'
+                    />
+                  </div>
+
+                  {/* Nationallity */}
+                  <div>
+                    <label htmlFor="nationality2" className='block text-primary text-sm px-4'>Nationality</label>
+                    <SelectCountry name={'nationality2'} value={passenger.nationality2} onChange={handleChangePassenger}/>
+                  </div></>)}                  
 
                 </form>
               </div>
@@ -124,6 +199,7 @@ const Detail = ({searchParams}) => {
                   <div className='flex flex-col'>
                     <div className='flex flex-row w-full border-b-2 pb-4'>
                       <input 
+                        onChange={handleInsuranceChange} checked={insuranceChecked}
                         type="checkbox" name='insurance' id='insurance' className='w-4'
                       />
                       <label htmlFor='insurance' className=' text-black text-lg font-semibold px-4'>Travel Insurance</label>
@@ -139,11 +215,16 @@ const Detail = ({searchParams}) => {
 
           </div>
           {/* Flight Details */}
-           <FlightDetails ticket={ticket}/>
+           <FlightDetails ticket={ticket} price={price}/>
         </div>
         
         <div className='flex justify-center'>
-          <button className=' mb-10 -mt-5 text-white bg-primary font-bold text-lg py-4 px-14 rounded-xl shadow-lg shadow-primary'>Procesed to Payment</button>
+          <Link href={{ 
+            pathname: '/detail/payment', 
+            query: {...ticket,'totalPrice':price,...passenger}
+          }}>
+            <button className=' mb-10 -mt-5 text-white bg-primary font-bold text-lg py-4 px-14 rounded-xl shadow-lg shadow-primary'>Procesed to Payment</button>
+          </Link>
         </div>
         
       </main>

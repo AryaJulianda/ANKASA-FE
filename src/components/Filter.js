@@ -63,7 +63,7 @@ const Filter = ({fetchFilteredData}) => {
         <button className='text-white text-sm font-semibold max-sm:inline-block hover:underline' onClick={handleSubmit}>Apply Filter</button>
       </div> 
       {/* filter column */}
-      <div className='w-full px-7 my-5 bg-white rounded-xl shadow-xl / max-xl:px-5 max-xl:my-3'>
+      <div className='w-full px-7 my-5 bg-white rounded-xl shadow-xl / max-xl:px-5'>
         
         {/* <div className='border-b'>transit
           <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openTransit,setOpenTransit)}>

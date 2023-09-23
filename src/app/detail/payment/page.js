@@ -1,11 +1,13 @@
+'use client'
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'
 import Image from 'next/image';
 import MonthPicker from '@/components/MonthPicker';
 import FlightDetails from '@/components/FlightDetails';
 
-const Payment = () => {
-
+const Payment = ({searchParams}) => {
+  const data = searchParams
+  console.log({'data':data})
   return (
     <div>
       <Navbar/>
@@ -40,7 +42,7 @@ const Payment = () => {
                           Credit card
                         </label>
                       </div>
-                      <Image src='/credit-card.svg' width={30} height={30}></Image>
+                      <Image alt='' src='/credit-card.svg' width={30} height={30}></Image>
                     </div>
                     <div className="mb-4 flex flex-row justify-between min-h-[1.5rem] pl-[1.5rem]">
                       <div>
@@ -55,7 +57,7 @@ const Payment = () => {
                           Paypal
                         </label>
                       </div>
-                      <Image src='/paypal.svg' width={30} height={30}></Image>
+                      <Image alt='' src='/paypal.svg' width={30} height={30}></Image>
                     </div>
                   </div>
                   {/* number card */}
@@ -84,7 +86,7 @@ const Payment = () => {
           </div>
 
           {/* Flight Details */}
-          <FlightDetails />
+          <FlightDetails ticket={data} price={data.totalPrice}/>
 
         </div>
         
