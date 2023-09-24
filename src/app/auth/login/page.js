@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Hero from "@/components/Auth/Hero";
 import LoginForm from "@/components/Auth/LoginForm";
-import { AuthProvider } from "@/context/authContext";
 
 const Page = () => {
 

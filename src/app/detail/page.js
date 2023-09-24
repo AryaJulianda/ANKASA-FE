@@ -1,5 +1,5 @@
 'use client'
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, usePathname, useRouter, useSearchParams } from 'next/navigation';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'
 import Image from 'next/image';
@@ -9,18 +9,20 @@ import SelectCountry from '@/components/SelectCountry';
 import FlightDetails from '@/components/FlightDetails';
 import { useState } from 'react';
 import Link from 'next/link';
+import { bookingTicket } from '../api/route';
 
 const Detail = ({searchParams}) => {
   const ticket = searchParams;
+  const router = useRouter()
 
   const [numberOfPassengers, setNumberOfPassengers] = useState('1');
   const [price,setPrice] = useState(ticket.price)
   const [insuranceChecked, setInsuranceChecked] = useState(false);
   const [passenger, setPassenger] = useState({
-    title1: 'Mr',
+    title1: '',
     fullname1: '',
     nationality1: '',
-    title2: 'Mr',
+    title2: '',
     fullname2: '',
     nationality2: '',
   });
@@ -42,6 +44,25 @@ const Detail = ({searchParams}) => {
     setPrice((prevPrice) => isChecked ? prevPrice + 2 : prevPrice - 2);
   };
   // console.log({passenger})
+  // const data = {...ticket,'totalPrice':price,...passenger};
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    // console.log(passenger,ticket.code)
+    const res = await bookingTicket(passenger,ticket.code)
+    const data = res.data
+    const params = new URLSearchParams(data)
+    const query = params.toString()
+    // console.log(query)
+    router.push('/detail/payment?'+query);
+  }
+
+  const handlePaylater = async (e) => {
+    e.preventDefault()
+    // console.log(passenger,ticket.code)
+    const res = await bookingTicket(passenger,ticket.code)
+    router.push('/myBooking');
+  }
 
   return (
     <div>
@@ -131,6 +152,7 @@ const Detail = ({searchParams}) => {
                       name="title1" id="title1" value={passenger.title1} onChange={handleChangePassenger}
                       className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'
                     >
+                      <option value=''>Select Title</option>
                       <option value="Mr">Mr.</option>
                       <option value="Mrs">Mrs.</option>
                     </select>
@@ -162,6 +184,7 @@ const Detail = ({searchParams}) => {
                       value={passenger.title2} onChange={handleChangePassenger}
                       name="title2" id="title2" className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'
                     >
+                      <option value=''>Select Title</option>
                       <option value="Mr">Mr.</option>
                       <option value="Mrs">Mrs.</option>
                     </select>
@@ -218,13 +241,18 @@ const Detail = ({searchParams}) => {
            <FlightDetails ticket={ticket} price={price}/>
         </div>
         
-        <div className='flex justify-center'>
-          <Link href={{ 
+        <div className='flex justify-center gap-5'>
+          {/* <Link href={{ 
             pathname: '/detail/payment', 
             query: {...ticket,'totalPrice':price,...passenger}
-          }}>
-            <button className=' mb-10 -mt-5 text-white bg-primary font-bold text-lg py-4 px-14 rounded-xl shadow-lg shadow-primary'>Procesed to Payment</button>
-          </Link>
+          }}> */}
+            <button 
+              onClick={handlePaylater}
+              className=' mb-10 -mt-5 text-white bg-[#FF7F23] font-bold text-lg py-4 px-14 rounded-xl shadow-lg hover:shadow-[#FF7F23]'>Pay in other time</button>
+            <button 
+              onClick={handleSubmit}
+              className=' mb-10 -mt-5 text-white bg-primary font-bold text-lg py-4 px-14 rounded-xl shadow-lg hover:shadow-primary'>Procesed to Payment</button>
+          {/* </Link> */}
         </div>
         
       </main>

@@ -27,7 +27,13 @@ const Navbar = () => {
   }
 
   const toggleFindTicket = () => {
-    setFindTicketVisible(!findTicketVisible);
+    // setFindTicketVisible(!findTicketVisible);
+    router.push('/search')
+  }
+
+  const toggleMyBooking = () => {
+    // setFindTicketVisible(!findTicketVisible);
+    router.push('/myBooking')
   }
 
   const handleLogout = () => {
@@ -56,12 +62,10 @@ const Navbar = () => {
 
             <div className='flex flex-row gap-x-12'>
               <div> 
-                <button className="text-base font-bold text-41" onClick={toggleFindTicket}>Find Ticket</button>
-                <div className={findTicketVisible ? "w-10 h-1 bg-primary rounded mx-auto" : "w-10 h-1 bg-white rounded mx-auto"}/>
+                <button className="text-base font-bold text-41 border-b-4 hover:border-primary" onClick={toggleFindTicket}>Find Ticket</button>
               </div>
               <div> 
-                <button className="text-base font-bold text-41">My Booking</button>
-                {/* <div className="w-10 h-1 bg-primary rounded mx-auto"/> */}
+                <button className="text-base font-bold text-41 border-b-4 hover:border-primary" onClick={toggleMyBooking}>My Booking</button>
               </div>
             </div>
           </section>
@@ -98,7 +102,7 @@ const Navbar = () => {
         
         {/* SIDE BAR */}
         {sidebarVisible && (
-        <div className='w-2/3 bg-white fixed -z-50 top-0 bottom-0 right-0 shadow-2xl pt-16'>
+        <div className='w-2/3 bg-white fixed z-[99999] top-0 bottom-0 right-0 shadow-2xl pt-16'>
           <div className='flex flex-col items-center'>
             <div className="border-b-2 border-gray-200 w-full text-center p-5"> 
               <button className={findTicketVisible ? "text-base font-bold text-primary" : "text-base font-bold text-41"} onClick={toggleFindTicket}>Find Ticket</button>

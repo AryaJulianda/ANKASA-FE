@@ -4,10 +4,24 @@ import Navbar from '@/components/Navbar'
 import Image from 'next/image';
 import MonthPicker from '@/components/MonthPicker';
 import FlightDetails from '@/components/FlightDetails';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { payTicket } from '@/app/api/route';
 
-const Payment = ({searchParams}) => {
-  const data = searchParams
-  console.log({'data':data})
+const Payment = () => {
+  // const data = searchParams
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const code = searchParams.get('code')
+  // console.log({code})
+  
+  const handlePaynow = async (e) => {
+    e.preventDefault()
+    const res = await payTicket(code)
+    const query = new URLSearchParams({code}).toString()
+    console.log({res,query})
+    router.push('/detail/payment/booking?'+query);
+  }
+  
   return (
     <div>
       <Navbar/>
@@ -82,17 +96,17 @@ const Payment = ({searchParams}) => {
                 </form>
               </div>
             </div>
-
+            <div className='flex justify-evenly gap-5'>
+              <button onClick={handlePaynow} className=' mb-10 text-white bg-primary font-bold text-lg py-4 px-14 rounded-xl shadow-lg hover:shadow-primary'>Pay Now</button>
+            </div>
           </div>
 
           {/* Flight Details */}
-          <FlightDetails ticket={data} price={data.totalPrice}/>
+          {/* <FlightDetails ticket={data} price={data.totalPrice}/> */}
 
         </div>
         
-        <div className='flex justify-center'>
-          <button className=' mb-10 text-white bg-primary font-bold text-lg py-4 px-14 rounded-xl shadow-lg hover:shadow-primary'>Pay Now</button>
-        </div>
+
         
       </main>
       <Footer/>

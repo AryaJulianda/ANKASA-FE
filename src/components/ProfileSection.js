@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ProfileSection = (props) => {
   return (
-    <div className="min-w-[30%] bg-white p-7 rounded-xl shadow-xl flex flex-col items-center gap-6 // max-sm:w-full">
+    <div className="min-w-[30%] h-fit bg-white p-7 rounded-xl shadow-xl flex flex-col items-center gap-6 // max-sm:w-full">
       {/* Photo Profile */}
       <Image src='/nico.jpg' width={135} height={135} alt="Photo Profile" className="mt-2 rounded-full ring-2 ring-primary border-2 border-white"/>
       {/* Select Photo Button */}

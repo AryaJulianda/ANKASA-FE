@@ -1,9 +1,29 @@
+'use client'
+import { getTicketById } from '@/app/api/route';
+import Barcode from 'react-barcode';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'
 import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const Booking = () => {
+  const searchParams = useSearchParams()
+  const code = searchParams.get('code')
+  // console.log(code)
+  const [data,setData] = useState({});
 
+  const fetchData = async () => {
+    const res = await getTicketById(code)
+    console.log(res.data?.result)
+    setData(res.data.result)
+  }
+  console.log(data?.ticket?.airline.photo)
+
+
+  useEffect(()=>{
+    fetchData();
+  },[])
   return (
     <div>
       <Navbar/>
@@ -14,7 +34,7 @@ const Booking = () => {
           {/* head */}
           <div className='flex flex-row mb-7 justify-between items-center'>
             <h1 className='text-2xl font-semibold'>Booking Pass</h1>
-            <button className=''><Image src='/icon-option.svg' width={5} height={23}/></button>
+            <button className=''><Image alt='' src='/icon-option.svg' width={5} height={23}/></button>
           </div>
           {/* ticket */}
           <div className='rounded-lg border-2 flex flex-col'>
@@ -22,13 +42,13 @@ const Booking = () => {
             <section className='w-full px-12 py-10 border-b-2 //  max-sm:p-4'>
               {/* title */}
               <div className='flex flex-row items-center mb-10 gap-7 // max-sm:gap-5 max-sm:mb-4'>
-                <Image src='/garuda.jpg' width={100} height={100} className='max-sm:w-14'/>
+                <img alt='' src={data?.ticket?.airline.photo} width={100} height={100} className='max-sm:w-14'/>
                 {/* from to */}
                 <div className='w-full'>
                   <div className="flex flex-row justify-start items-center gap-7 // max-sm:gap-5">
-                    <h1 className="text-2xl font-semibold text-black // max-sm:text-sm">Medan <br />( IDN )</h1>
-                    <Image src='/plane.svg' width={20} height={20} className='mb-2 // max-sm:w-4'/>
-                    <h1 className="text-2xl font-semibold text-black // max-sm:text-sm">Tokyo <br />( JPN )</h1>
+                    <h1 className="text-2xl font-semibold text-black text-left // max-sm:text-sm">{data?.ticket?.from.location}</h1>
+                    <Image alt='' src='/plane.svg' width={20} height={20} className='mb-2 // max-sm:w-4'/>
+                    <h1 className="text-2xl font-semibold text-black text-right // max-sm:text-sm">{data?.ticket?.to.location}</h1>
                   </div>
                 </div>
               </div>
@@ -59,7 +79,8 @@ const Booking = () => {
             </section>
             {/* right */}
             <section className='w-full flex justify-center items-center p-10 // max-sm:p-4'>
-                <Image src='/barcode (1).svg' width={1} height={1} className='w-4/5 // max-sm:w-full'/>
+                {/* <Image alt='' src='/barcode (1).svg' width={1} height={1} className='w-4/5 // max-sm:w-full'/> */}
+                <Barcode value={code} />
                  {/* <div className="bg-[url('/barcode.svg')] w-full h-full bg-cover bg-center bg-primary -rotate-90 absolute top-0"/> */}
             </section>
           </div> 
