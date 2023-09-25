@@ -4,11 +4,13 @@ import { useContext, useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/navigation'
 import toast from "react-hot-toast";
+import { Bars } from  'react-loader-spinner'
 
 const LoginForm = (props) => {
   const base_url = 'https://easy-lime-seal-toga.cyclic.app';
   const router = useRouter()
 
+  const [loading,setLoading] = useState(false)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -87,18 +89,21 @@ const LoginForm = (props) => {
             Sing In
           </button>
 
-          <div className="text-center">
+          {/* <div className="text-center">
             <p>Did you forgot your password?</p>
             <a href="#" className="text-primary hover:border-b-2 border-primary mt-5">Tap here for reset</a>
-          </div>
+          </div> */}
 
           <div className='border-t-2 border-gray-300 text-center mx-5 py-4 mt-5'>
             <p>Don't have an account</p>
           </div>
 
-          <Link href='/auth/register' className='text-primary bg-white py-4 font-bold rounded-xl border-2 border-primary text-center'>
-            Sing Up
-          </Link>
+            <Link href='/auth/register' onClick={()=>setLoading(true)} className='text-primary bg-white py-4 font-bold rounded-xl border-2 border-primary text-center'>
+              {!loading ? 'Sing Up' : 
+              <Bars height = "20px"
+                width = "auto"
+                color = '#2395FF'/>}
+            </Link>
 
         </form>
       </div>

@@ -1,6 +1,13 @@
+'use client'
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+const ProfileSection = () => {
+  const router = useRouter()
 
-const ProfileSection = (props) => {
+  const handleLogout = () => {
+    localStorage.removeItem("access_token");
+    router.push('/auth/login')
+  }
   return (
     <div className="min-w-[30%] h-fit bg-white p-7 rounded-xl shadow-xl flex flex-col items-center gap-6 // max-sm:w-full">
       {/* Photo Profile */}
@@ -50,7 +57,7 @@ const ProfileSection = (props) => {
             <p className="font-semibold text-base text-black flex-1 text-start">Setting</p>
             <Image src='/arrow-gray.svg' width={10} height={10} alt="arrow" />
           </button>
-          <button className="px-4 py-2 flex flex-row justify-between items-center w-full gap-5">
+          <button onClick={handleLogout} className="px-4 py-2 flex flex-row justify-between items-center w-full gap-5">
             <Image src='/logout.svg' width={20} height={20} alt="user"/>
             <p className="font-semibold text-base text-[#F24545] flex-1 text-start">Logout</p>
             <Image src='/arrow-red.svg' width={10} height={10} alt="arrow" />

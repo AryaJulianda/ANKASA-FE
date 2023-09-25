@@ -10,13 +10,16 @@ import FlightDetails from '@/components/FlightDetails';
 import { useState } from 'react';
 import Link from 'next/link';
 import { bookingTicket } from '../api/route';
+import { Bars } from 'react-loader-spinner';
 
 const Detail = ({searchParams}) => {
   const ticket = searchParams;
   const router = useRouter()
 
+  const [loading,setLoading] = useState(false)
   const [numberOfPassengers, setNumberOfPassengers] = useState('1');
   const [price,setPrice] = useState(ticket.price)
+  console.log({price})
   const [insuranceChecked, setInsuranceChecked] = useState(false);
   const [passenger, setPassenger] = useState({
     title1: '',
@@ -41,13 +44,14 @@ const Detail = ({searchParams}) => {
   const handleInsuranceChange = (e) => {
     const isChecked = e.target.checked;
     setInsuranceChecked(isChecked);
-    setPrice((prevPrice) => isChecked ? prevPrice + 2 : prevPrice - 2);
+    setPrice((prevPrice) => isChecked ? parseInt(prevPrice) + 2 : parseInt(prevPrice) - 2);
   };
   // console.log({passenger})
   // const data = {...ticket,'totalPrice':price,...passenger};
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setLoading(true)
     // console.log(passenger,ticket.code)
     const res = await bookingTicket(passenger,ticket.code)
     const data = res.data
@@ -59,6 +63,7 @@ const Detail = ({searchParams}) => {
 
   const handlePaylater = async (e) => {
     e.preventDefault()
+    setLoading(true)
     // console.log(passenger,ticket.code)
     const res = await bookingTicket(passenger,ticket.code)
     router.push('/myBooking');
@@ -67,6 +72,8 @@ const Detail = ({searchParams}) => {
   return (
     <div>
       <Navbar/>
+      
+      {loading ? <Bars width='100px' height='auto' color='#2395FF' wrapperClass='flex justify-center items-center w-screen h-screen'/> : <>
       <main className='pt-28 bg-[#F5F6FA] // max-xl:pt-20 // max-sm:pt-10'>
         {/* bluebox */}
         <div className='bg-primary py-10 px-16 flex flex-row items-center rounded-b-3xl shadow-2xl h-44 absolute right-0 left-0 w-full // max-sm:rounded-b-2xl max-sm:h-28'>
@@ -164,7 +171,7 @@ const Detail = ({searchParams}) => {
                     <input 
                       value={passenger.fullname1} onChange={handleChangePassenger}
                       type="text" name="fullname1" id='fullname1' placeholder='insert passenger full name' 
-                      className='border-b-2 text-black p-4 text-base focus:outline-none focus:border-primary w-full'
+                      className='border-b-2 text-black p-4 text-base focus:outline-none focus:border-primary w-full' required
                     />
                   </div>
 
@@ -256,7 +263,7 @@ const Detail = ({searchParams}) => {
         </div>
         
       </main>
-      <Footer/>
+      <Footer/></>}
     </div>
   )
 };

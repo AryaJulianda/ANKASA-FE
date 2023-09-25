@@ -60,7 +60,7 @@ const Filter = ({fetchFilteredData}) => {
       {/* head filter */}
       <div className='flex flex-row justify-between'>
         <h2 className='text-white font-semibold text-2xl / max-xl:text-xl'>Filter</h2>
-        <button className='text-white text-sm font-semibold max-sm:inline-block hover:underline' onClick={handleSubmit}>Apply Filter</button>
+        <button className='text-white rounded-lg px-2 bg-[#4FCF4D] text-sm font-semibold max-sm:inline-block hover:bg-white hover:text-[#4FCF4D]' onClick={handleSubmit}>Apply Filter</button>
       </div> 
       {/* filter column */}
       <div className='w-full px-7 my-5 bg-white rounded-xl shadow-xl / max-xl:px-5'>

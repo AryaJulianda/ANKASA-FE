@@ -28,12 +28,12 @@ const Navbar = () => {
 
   const toggleFindTicket = () => {
     // setFindTicketVisible(!findTicketVisible);
-    router.push('/search')
+    accessToken ? router.push('/search') : router.push('/auth/login')
   }
 
   const toggleMyBooking = () => {
     // setFindTicketVisible(!findTicketVisible);
-    router.push('/myBooking')
+    accessToken ? router.push('/myBooking') : router.push('/auth/login')
   }
 
   const handleLogout = () => {
@@ -57,7 +57,7 @@ const Navbar = () => {
           <section className="flex flex-row items-center gap-12 / max-sm:hidden ">
             <div className="bg-gray-100 flex flex-row items-center h-fit px-5 py-3 gap-x-3 w-64 rounded-xl shadow-md">
               <Image alt="" src='/search.svg' width={1} height={1} className="w-6"/>
-              <input type="text" placeholder="Where you want to go?" className="text-sm text-gray-500 focus:outline-none bg-transparent"/>
+              <input type="text" onClick={toggleFindTicket} placeholder="Where you want to go?" className="text-sm text-gray-500 focus:outline-none bg-transparent"/>
             </div>  
 
             <div className='flex flex-row gap-x-12'>
@@ -77,14 +77,14 @@ const Navbar = () => {
               <Image alt="" src='/icon-notification.svg' width={24} height={24} className="w-6"/>
             </div>
 
-            <div>
+            <button onClick={()=>accessToken? router.push('/detailProfile') : router.push('/auth/login')}>
               <Image alt="" src='/nico.jpg' width={56} height={56} className="rounded-full border-2 border-primary p-0.5"/>
-            </div>
+            </button>
           </section>) 
           :(<button 
-              onClick={()=> router.push('/auth/register')}
+              onClick={()=> router.push('/auth/login')}
               className="bg-primary text-base font-bold text-white py-3 px-10 rounded-xl hover:text-primary hover:bg-white border-2 border-white hover:border-primary shadow-primary / max-sm:hidden">
-            Sing Up
+            Sing In
           </button>)}
 
           <section className="max-sm:flex flex-row align-center gap-4 hidden">

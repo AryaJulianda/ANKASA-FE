@@ -4,12 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { Bars } from "react-loader-spinner";
 
 const RegistForm = (props) => {
 
   const base_url = 'https://easy-lime-seal-toga.cyclic.app';
   const router = useRouter();
 
+  const [isLoading,setLoading]=useState(false)
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -112,9 +114,12 @@ const RegistForm = (props) => {
           <p>Already have an account</p>
         </div>
 
-        <Link href="/auth/login" type="submit" className='text-primary bg-white py-4 font-bold rounded-xl border-2 border-primary text-center'>
-          Sing In
-        </Link>
+        <Link href='/auth/login' onClick={()=>setLoading(true)} className='text-primary bg-white py-4 font-bold rounded-xl border-2 border-primary text-center'>
+              {!isLoading ? 'Sing In' : 
+              <Bars height = "20px"
+                width = "auto"
+                color = '#2395FF'/>}
+            </Link>
 
       </form>
     </div>

@@ -14,7 +14,7 @@ const Home = () => {
           <h1 className='text-5xl leading-snug text-41 font-semibold max-sm:text-center'>Find your <span className='text-primary'>Flight</span></h1>
           <p className='text-[#979797] font-normal text-lg max-sm:text-center'>and explore the world with us</p>
         </div>
-        <div className='bg-[url("/japan.jpg")] w-[1094px] max-sm:w-full bg-cover h-[500px] bg-no-repeat rounded-3xl -ml-60 max-sm:m-0 bg-center max-sm:mt-10'>
+        <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-[1094px] max-sm:w-full bg-cover h-[500px] bg-no-repeat rounded-3xl -ml-60 max-sm:m-0 bg-center max-sm:mt-10'>
           <div className='py-5 hidden max-sm:flex z-50 w-full h-full flex-col justify-center items-center bg-gradient-to-br from-[#000000bd] to-[#00000052] rounded-3xl'>
             <h1 className='text-5xl leading-snug text-white font-semibold max-sm:text-center'>Find your <span className='text-primary'>Flight</span></h1>
             <p className='text-white font-normal text-lg max-sm:text-center'>and explore the world with us</p>
@@ -36,7 +36,7 @@ const Home = () => {
           </div>
           {/* list trending */}
           <div className='flex flex-row gap-5 overflow-x-scroll w-full justify-between pb-10'>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -46,7 +46,7 @@ const Home = () => {
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -56,7 +56,7 @@ const Home = () => {
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -66,7 +66,7 @@ const Home = () => {
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -76,7 +76,7 @@ const Home = () => {
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -86,7 +86,7 @@ const Home = () => {
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -96,7 +96,7 @@ const Home = () => {
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -106,7 +106,7 @@ const Home = () => {
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -116,7 +116,7 @@ const Home = () => {
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -126,7 +126,7 @@ const Home = () => {
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("/japan.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
@@ -151,47 +151,47 @@ const Home = () => {
           <div className='flex flex-row justify-between py-12 gap-5 overflow-x-scroll w-full'>
             {/* list item */}
             <div>
-              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
               <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
               <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
               <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
               <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
               <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
               <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
               <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
               <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("/japan.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
               <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
             </div>
           </div>

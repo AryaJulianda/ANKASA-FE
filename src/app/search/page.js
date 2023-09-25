@@ -8,16 +8,19 @@ import { useEffect, useState } from 'react';
 
 const Search = () => {
   const [data,setData] = useState([]);
-
+  const [loading,setLoading] = useState(false)
   const fetchAllData = async () => {
+    setLoading(true)
     const res = await getAllData()
     setData(res)
+    setLoading(false)
   }
 
   const fetchFilteredData = async (facilities,minPrice,maxPrice,airlineId) => {
-    // console.log({facilities,minPrice,maxPrice,airlineId})
+    setLoading(true)
     const res = await getDataFiltered(facilities,minPrice,maxPrice,airlineId)
     setData(res)
+    setLoading(false)
   }
 
   useEffect(()=>{
@@ -28,9 +31,9 @@ const Search = () => {
   return (
     <div>
       <Navbar/>
-      <main className='pt-28 / max-xl:pt-20 / max-sm:pt-16'>
+      <main className='pt-28 min-h-screen / max-xl:pt-20 / max-sm:pt-16'>
         {/* main */}
-        <div className='bg-[#F5F6FA] w-full px-16 relative z-50 flex flex-row gap-6 / max-xl:px-8 max-xl:gap-4 / max-sm:px-4 max-sm:flex-col'>
+        <div className='bg-[#F5F6FA] w-full min-h-screen px-16 relative z-50 flex flex-row gap-6 / max-xl:px-8 max-xl:gap-4 / max-sm:px-4 max-sm:flex-col'>
           {/* bluebox */}
           <div className='bg-primary h-24 absolute -z-10 left-0 right-0 rounded-b-3xl shadow-2xl'></div>
           {/* filter */}
@@ -39,7 +42,7 @@ const Search = () => {
           </div>
 
           {/* select ticket */}
-          <SelectTicket tickets={data.data}/>
+          <SelectTicket tickets={data.data} loading={loading} setLoading={setLoading}/>
 
 
         </div>

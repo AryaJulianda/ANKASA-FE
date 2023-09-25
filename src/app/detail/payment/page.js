@@ -3,18 +3,21 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'
 import Image from 'next/image';
 import MonthPicker from '@/components/MonthPicker';
-import FlightDetails from '@/components/FlightDetails';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { payTicket } from '@/app/api/route';
+import { Bars } from 'react-loader-spinner';
+import { useState } from 'react';
 
 const Payment = () => {
   // const data = searchParams
+  const [loadingPn,setLoadingPn]=useState(false)
   const router = useRouter()
   const searchParams = useSearchParams()
   const code = searchParams.get('code')
   // console.log({code})
   
   const handlePaynow = async (e) => {
+    setLoadingPn(true)
     e.preventDefault()
     const res = await payTicket(code)
     const query = new URLSearchParams({code}).toString()
@@ -25,6 +28,7 @@ const Payment = () => {
   return (
     <div>
       <Navbar/>
+      {loadingPn ? <Bars width='100px' height='auto' color='#2395FF' wrapperClass='flex justify-center items-center w-screen h-screen'/> : <>
       <main className='pt-28 bg-[#F5F6FA] // max-xl:pt-20 // max-sm:pt-10'>
         {/* bluebox */}
         <div className='bg-primary py-10 px-16 flex flex-row items-center rounded-b-3xl shadow-2xl h-44 absolute right-0 left-0 w-full // max-sm:rounded-b-2xl max-sm:h-28'>
@@ -97,7 +101,7 @@ const Payment = () => {
               </div>
             </div>
             <div className='flex justify-evenly gap-5'>
-              <button onClick={handlePaynow} className=' mb-10 text-white bg-primary font-bold text-lg py-4 px-14 rounded-xl shadow-lg hover:shadow-primary'>Pay Now</button>
+              <button onClick={handlePaynow} className=' mb-10 text-white bg-primary font-bold text-lg py-4 px-14 rounded-xl shadow-lg hover:shadow-primary'>{!loadingPn ? 'Pay Now' : <Bars/>}</button>
             </div>
           </div>
 
@@ -105,11 +109,9 @@ const Payment = () => {
           {/* <FlightDetails ticket={data} price={data.totalPrice}/> */}
 
         </div>
-        
-
-        
+      
       </main>
-      <Footer/>
+      <Footer/></>}
     </div>
   )
 };
