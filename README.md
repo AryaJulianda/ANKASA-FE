@@ -1,34 +1,120 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- <div id="top"></div> -->
 
-## Getting Started
+<!-- PROJECT LOGO -->
+<!-- <br /> -->
+<div align="center">
+  <h3 align="center">Ankasa - Flight Ticket Booking</h3>
 
-First, run the development server:
+  <p align="center">
+    <a href="https://e82c3767.mama-recipe.pages.dev/">View Demo</a>
+    ·
+    <a href="https://github.com/AryaJulianda/RECIPE-FE/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/AryaJulianda/RECIPE-FE/issues">Request Feature</a>
+  </p>
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+
+<!-- ABOUT THE PROJECT -->
+
+## ✏️ About
+Ankasa is an application to help you find ticket to flight in simple ways. Ankasa is a flight ticket booking website with a simple and attractive user interface, designed to make it easier for users to book tickets.
+
+## 🔖 Build With
+This app was built with some technologies below:
+
+- [Javascript](https://www.javascript.com/)
+- [Next JS](https://nextjs.org)
+- [React JS](https://react.dev)
+- [Tailwind](https://tailwindcss.com)
+
+## 🔥 Getting Started
+
+### Prerequisites
+
+Before going to the installation stage there are some software that must be installed first.
+
+- [NodeJs](https://nodejs.org/en/download/)
+
+
+## 💻 How To Install?
+
+If you want to run this project locally, I recommend you to configure the [back-end](https://github.com/eanp/bookflight) first before configuring this repo front-end.
+
+- Clone the repo
+
+```
+git clone https://github.com/AryaJulianda/ANKASA-FE.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Go To Folder Repo
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+cd ANKASA-FE
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Install Module
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+- <a href="#setup-env">Setup .env</a>
+- Type ` npm run dev` To Start Website
+- Type ` npm run start` To Start Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Setup .env example
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Create .env file in your root project folder.
 
-## Deploy on Vercel
+```
+BASE_URL=[your base url]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
+
+## Screenshot
+
+| Login Page | Register Page |
+| ------------- | ------------- |
+| ![Login](/public/images/screenshoot/login.png?raw=true "Login Page") | ![Register](/public/images/screenshoot/register.png?raw=true "Register Page")|
+
+| Home Page  | Search Page |
+| ------------- | ------------- |
+| ![Landing](/public/images/screenshoot/Home%20Page.png?raw=true "Landing Page") | ![Search Page](/public/images/screenshoot/search.png?raw=true "Recipe Detail Page") |
+
+| Profile Page | Add Recipe Page |
+| ------------- | ------------- |
+| ![Profile](/public/images/screenshoot/profile.png?raw=true "Profile Page") | ![Add Recipe](/public/images/screenshoot/add%20recipe.png?raw=true "Add Recipe Page") |
+
+
+## 🍻 Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+### 👨‍💻 Author
+
+* **Arya Julianda**
+
+* Github: [@AryaJulianda](https://github.com/AryaJulianda)
+* LinkedIn: [@Arya Julianda](https://www.linkedin.com/in/aryajulianda)
+
+### Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+Made by ❤️ 
