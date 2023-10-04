@@ -73,14 +73,7 @@ BASE_URL=[your base url]
 
 ```
 
-
-
-
-
-
-
 ## 📹 Demo Recording
-please wait a moment if you don't see it...
 ![](https://github.com/AryaJulianda/ANKASA-FE/blob/main/ANKASA-DEMO.gif)
 
 ## 🍻 Contributing
