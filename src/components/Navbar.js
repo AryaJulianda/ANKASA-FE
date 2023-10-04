@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="fixed top-0 left-0 right-0 z-50">
+      <div className="fixed top-0 left-0 right-0 z-[9999]">
         <main className="flex bg-white items-center py-8 justify-around shadow-lg / max-xl:py-4 / max-sm:py-4 max-sm:justify-between max-sm:px-5">
 
           <section>

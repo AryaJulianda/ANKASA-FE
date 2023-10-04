@@ -21,8 +21,9 @@ const SelectTicket = ({tickets,loading,setLoading}) => {
       {/* list ticket */}
 
 
-      {loading ? <Bars height="auto" width="100px" color='#2395FF' wrapperClass="mx-auto mt-32"/> :
-      tickets?.map((ticket)=>{
+      {loading ? (<Bars height="auto" width="100px" color='#2395FF' wrapperClass="mx-auto mt-32"/>) :
+
+      (!tickets?.length==0 ? tickets?.map((ticket)=>{
         //  console.log('ticket=>',ticket)
           const [fromCity, fromCountry] = ticket.from.location.split(',').map(item => item.trim());
           const [toCity, toCountry] = ticket.to.location.split(',').map(item => item.trim());
@@ -105,7 +106,9 @@ const SelectTicket = ({tickets,loading,setLoading}) => {
             </div>
         </div>
         )
-      })}
+      })
+      : <p className='text-gray-700 font-semibold text-xl text-center mt-40 // max-sm:mt-4'>Ticket Not Found</p>)
+    }
         
     </div>
   )
