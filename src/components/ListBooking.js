@@ -22,7 +22,7 @@ const ListBooking = ({tickets,router}) => {
       </div>
 
       {/* List Booking */}
-      {tickets ? (<p className="text-center text-base text-41 font-semibold">Empty Ticket</p>) :
+      {!tickets ? (<p className="text-center text-base text-41 font-semibold">Empty Ticket</p>) :
       tickets?.map((ticket)=>{
       return(
         <div className="rounded-xl bg-white shadow-lg w-full px-8 py-7" key={ticket.code}>
