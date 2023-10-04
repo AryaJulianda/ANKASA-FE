@@ -46,12 +46,42 @@ const Home = () => {
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428743/azat9kgrswjsqqujrql5.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
-                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
-                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
+                  <h3 className='font-semibold text-sm text-white'>Bali</h3>
+                  <h1 className='font-bold text-2xl text-white'>Indonesia</h1>
+                </div>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
+              </div>
+            </div>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428858/nytjxz9a2l4sfvz73qiz.jpg")] bg-center bg-cover flex flex-col justify-between'>
+              <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
+              <div className='flex flex-row justify-between'>
+                <div>
+                  <h3 className='font-semibold text-sm text-white'>Paris</h3>
+                  <h1 className='font-bold text-2xl text-white'>Prancis</h1>
+                </div>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
+              </div>
+            </div>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428958/mzkozv1kv3pjg55xkxlg.jpg")] bg-center bg-cover flex flex-col justify-between'>
+              <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
+              <div className='flex flex-row justify-between'>
+                <div>
+                  <h3 className='font-semibold text-sm text-white'>Cappadocia</h3>
+                  <h1 className='font-bold text-2xl text-white'>Turkey</h1>
+                </div>
+                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
+              </div>
+            </div>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428905/levux17oni9y1yiriefh.jpg")] bg-center bg-cover flex flex-col justify-between'>
+              <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
+              <div className='flex flex-row justify-between'>
+                <div>
+                  <h3 className='font-semibold text-sm text-white'>Roma</h3>
+                  <h1 className='font-bold text-2xl text-white'>Italia</h1>
                 </div>
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
@@ -66,76 +96,47 @@ const Home = () => {
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428743/azat9kgrswjsqqujrql5.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
-                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
-                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
+                  <h3 className='font-semibold text-sm text-white'>Bali</h3>
+                  <h1 className='font-bold text-2xl text-white'>Indonesia</h1>
                 </div>
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428858/nytjxz9a2l4sfvz73qiz.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
-                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
-                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
+                  <h3 className='font-semibold text-sm text-white'>Paris</h3>
+                  <h1 className='font-bold text-2xl text-white'>Prancis</h1>
                 </div>
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428958/mzkozv1kv3pjg55xkxlg.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
-                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
-                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
+                  <h3 className='font-semibold text-sm text-white'>Cappadocia</h3>
+                  <h1 className='font-bold text-2xl text-white'>Turkey</h1>
                 </div>
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
+            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428905/levux17oni9y1yiriefh.jpg")] bg-center bg-cover flex flex-col justify-between'>
               <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
               <div className='flex flex-row justify-between'>
                 <div>
-                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
-                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
+                  <h3 className='font-semibold text-sm text-white'>Roma</h3>
+                  <h1 className='font-bold text-2xl text-white'>Italia</h1>
                 </div>
                 <Image alt='' src='/more.svg' width={30} height={30} className=''/>
               </div>
             </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
-              <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
-              <div className='flex flex-row justify-between'>
-                <div>
-                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
-                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
-                </div>
-                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
-              </div>
-            </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
-              <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
-              <div className='flex flex-row justify-between'>
-                <div>
-                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
-                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
-                </div>
-                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
-              </div>
-            </div>
-            <div className='min-w-[208px] h-[266px] p-6 rounded-2xl bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] bg-center bg-cover flex flex-col justify-between'>
-              <p className='text-white font-bold text-sm bg-[#ffffff69] rounded-full w-fit px-4 py-2'>15 Airlines</p>
-              <div className='flex flex-row justify-between'>
-                <div>
-                  <h3 className='font-semibold text-sm text-white'>Tokyo</h3>
-                  <h1 className='font-bold text-2xl text-white'>Japan</h1>
-                </div>
-                <Image alt='' src='/more.svg' width={30} height={30} className=''/>
-              </div>
-            </div>
+           
           </div>
         </div>
 
@@ -156,8 +157,23 @@ const Home = () => {
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
-              <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428743/azat9kgrswjsqqujrql5.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Bali</p>
+            </div>
+            {/* list item */}
+            <div>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428858/nytjxz9a2l4sfvz73qiz.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Paris</p>
+            </div>
+            {/* list item */}
+            <div>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428958/mzkozv1kv3pjg55xkxlg.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Cappadocia</p>
+            </div>
+            {/* list item */}
+            <div>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428905/levux17oni9y1yiriefh.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Roma</p>
             </div>
             {/* list item */}
             <div>
@@ -166,33 +182,23 @@ const Home = () => {
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
-              <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428743/azat9kgrswjsqqujrql5.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Bali</p>
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
-              <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428858/nytjxz9a2l4sfvz73qiz.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Paris</p>
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
-              <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428958/mzkozv1kv3pjg55xkxlg.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Capadocia</p>
             </div>
             {/* list item */}
             <div>
-              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
-              <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
-            </div>
-            {/* list item */}
-            <div>
-              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
-              <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
-            </div>
-            {/* list item */}
-            <div>
-              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1695653546/ttrwnvo9z9swgaawdsxu.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
-              <p className='text-center text-white text-xl font-semibold'>Tokyo</p>
+              <div className='bg-[url("https://res.cloudinary.com/dgwlgaxtm/image/upload/v1696428905/levux17oni9y1yiriefh.jpg")] w-36 bg-center bg-cover h-36 rounded-full border-4 border-white mb-3'/>
+              <p className='text-center text-white text-xl font-semibold'>Roma</p>
             </div>
           </div>
 
