@@ -6,11 +6,11 @@
   <h3 align="center">Ankasa - Flight Ticket Booking</h3>
 
   <p align="center">
-    <a href="https://e82c3767.mama-recipe.pages.dev/">View Demo</a>
+    <a href="https://ankasa-next-js.vercel.app/">View Demo</a>
     ·
-    <a href="https://github.com/AryaJulianda/RECIPE-FE/issues">Report Bug</a>
+    <a href="https://github.com/AryaJulianda/ANKASA-FE/issues">Report Bug</a>
     ·
-    <a href="https://github.com/AryaJulianda/RECIPE-FE/issues">Request Feature</a>
+    <a href="https://github.com/AryaJulianda/ANKASA-FE/issues">Request Feature</a>
   </p>
 </div>
 
@@ -79,19 +79,7 @@ BASE_URL=[your base url]
 
 
 
-## Screenshot
-
-| Login Page | Register Page |
-| ------------- | ------------- |
-| ![Login](/public/images/screenshoot/login.png?raw=true "Login Page") | ![Register](/public/images/screenshoot/register.png?raw=true "Register Page")|
-
-| Home Page  | Search Page |
-| ------------- | ------------- |
-| ![Landing](/public/images/screenshoot/Home%20Page.png?raw=true "Landing Page") | ![Search Page](/public/images/screenshoot/search.png?raw=true "Recipe Detail Page") |
-
-| Profile Page | Add Recipe Page |
-| ------------- | ------------- |
-| ![Profile](/public/images/screenshoot/profile.png?raw=true "Profile Page") | ![Add Recipe](/public/images/screenshoot/add%20recipe.png?raw=true "Add Recipe Page") |
+## 📹 Demo Recording
 
 
 ## 🍻 Contributing
