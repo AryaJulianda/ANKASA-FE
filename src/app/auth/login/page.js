@@ -14,6 +14,14 @@ const Page = () => {
           <h1 className='font-semibold text-2xl text-gray-700'>Ankasa</h1>
         </div>
 
+        <div className="rounded-md border-2 border-primary p-4">
+          <p className="text-primary font-semibold text-center">
+            Demo Acount <br/> 
+            Email : tester@gmail.com <br/>
+            Password : !Tester123
+          </p>
+        </div>
+
         <LoginForm /> 
 
       </div>
