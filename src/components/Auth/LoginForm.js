@@ -70,35 +70,35 @@ const LoginForm = (props) => {
 
   return (
     <div className=''>
-        <h1 className='text-4xl max-sm:text-2xl max-sm:text-center font-semibold py-8 text-black'>Login</h1>
+        <h1 className='py-8 text-4xl font-semibold text-black max-sm:text-2xl max-sm:text-center'>Login</h1>
         <form className='flex flex-col gap-5'>
           <input 
             type="text" name="email" placeholder='Email' value={email} onChange={(e)=>handleChange(e)}
-            className='border-b-2 border-gray-300 p-4 text-base focus:outline-none focus:border-primary'
+            className='p-4 text-base border-b-2 border-gray-300 focus:outline-none focus:border-primary'
           />   
         
           <div className='relative'>
             <input 
               type={showPassword ? 'text' :'password'} name="password" placeholder='Password' security="false" value={password} onChange={(e)=>handleChange(e)}
-              className='border-b-2 border-gray-300 p-4 text-base focus:outline-none focus:border-primary w-full'
+              className='w-full p-4 text-base border-b-2 border-gray-300 focus:outline-none focus:border-primary'
             />
             <Image src='/see.svg' className='absolute top-0 right-0 p-4 w-14' width={1} height={1} alt='see password' onClick={handleShowPassword}/>
           </div>
         
-          <button type="submit" className='bg-primary text-white py-4 font-bold rounded-xl my-4' onClick={(e)=>handleSubmit(e)}>
+          <button type="submit" className='py-4 my-4 font-bold text-white bg-primary rounded-xl' onClick={(e)=>handleSubmit(e)}>
             Sing In
           </button>
 
           {/* <div className="text-center">
             <p>Did you forgot your password?</p>
-            <a href="#" className="text-primary hover:border-b-2 border-primary mt-5">Tap here for reset</a>
+            <a href="#" className="mt-5 text-primary hover:border-b-2 border-primary">Tap here for reset</a>
           </div> */}
 
-          <div className='border-t-2 border-gray-300 text-center mx-5 py-4 mt-5'>
+          <div className='py-4 mx-5 mt-5 text-center border-t-2 border-gray-300'>
             <p>Don't have an account</p>
           </div>
 
-            <Link href='/auth/register' onClick={()=>setLoading(true)} className='text-primary bg-white py-4 font-bold rounded-xl border-2 border-primary text-center'>
+            <Link href='/auth/register' onClick={()=>setLoading(true)} className='py-4 font-bold text-center bg-white border-2 text-primary rounded-xl border-primary'>
               {!loading ? 'Sing Up' : 
               <Bars height = "20px"
                 width = "auto"

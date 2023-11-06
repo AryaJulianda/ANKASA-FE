@@ -2,7 +2,7 @@ import React from "react"
 
 const SelectCountry = ({name,value,onChange}) => {
   return (
-    <select name={name} id={name} value={value} onChange={onChange} className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'>
+    <select name={name} id={name} value={value} onChange={onChange} className='w-full px-3 py-4 border-b-2 focus:outline-none focus:border-primary'>
       <option value="">Select Your Nationallity</option>
       <option value="afghan">Afghan</option>
       <option value="albanian">Albanian</option>

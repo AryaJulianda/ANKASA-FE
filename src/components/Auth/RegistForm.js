@@ -79,22 +79,22 @@ const RegistForm = (props) => {
 
   return (
     <div className=''>
-      <h1 className='text-4xl max-sm:text-2xl max-sm:text-center font-semibold py-8 text-black'>Register</h1>
+      <h1 className='py-8 text-4xl font-semibold text-black max-sm:text-2xl max-sm:text-center'>Register</h1>
       <form className='flex flex-col gap-5'>
         <input 
           type="text" name="name" placeholder='Full Name' value={name} onChange={(e)=> handleChange(e)}
-          className='border-b-2 border-gray-300 p-4 text-base focus:outline-none focus:border-primary'
+          className='p-4 text-base border-b-2 border-gray-300 focus:outline-none focus:border-primary'
         />
 
         <input 
           type="text" name="email" placeholder='Email' value={email} onChange={(e)=> handleChange(e)}
-          className='border-b-2 border-gray-300 p-4 text-base focus:outline-none focus:border-primary'
+          className='p-4 text-base border-b-2 border-gray-300 focus:outline-none focus:border-primary'
         />         
       
         <div className='relative'>
           <input 
             type={showPassword ? "text" : "password"} name="password" placeholder='Password' value={password} onChange={(e)=> handleChange(e)}
-            className='border-b-2 border-gray-300 p-4 text-base focus:outline-none focus:border-primary w-full'
+            className='w-full p-4 text-base border-b-2 border-gray-300 focus:outline-none focus:border-primary'
           />
           <Image src='/see.svg' alt='see password' className='absolute top-0 right-0 p-4 w-14' width={1} height={1} onClick={handleShowPassword}/>
         </div>
@@ -106,15 +106,15 @@ const RegistForm = (props) => {
         </button>
 
         <div className="form-group form-check">
-          <input name="acceptTerms" type="checkbox" className='mr-4 w-4 h-4 checked:bg-primary border-primary' checked={checked} onChange={() => setChecked(!checked)}/>
+          <input name="acceptTerms" type="checkbox" className='w-4 h-4 mr-4 checked:bg-primary border-primary' checked={checked} onChange={() => setChecked(!checked)}/>
           <label htmlFor="acceptTerms" className="">Accept Terms & Conditions</label>
         </div>
 
-        <div className='border-t-2 border-gray-300 text-center mx-5 py-4 mt-5'>
+        <div className='py-4 mx-5 mt-5 text-center border-t-2 border-gray-300'>
           <p>Already have an account</p>
         </div>
 
-        <Link href='/auth/login' onClick={()=>setLoading(true)} className='text-primary bg-white py-4 font-bold rounded-xl border-2 border-primary text-center'>
+        <Link href='/auth/login' onClick={()=>setLoading(true)} className='py-4 font-bold text-center bg-white border-2 text-primary rounded-xl border-primary'>
               {!isLoading ? 'Sing In' : 
               <Bars height = "20px"
                 width = "auto"

@@ -4,8 +4,8 @@ const Footer = () => {
 
   return (
     <>
-    <main className="flex w-full h-72 bg-white py-8 flex-row justify-evenly shadow-inner / max-sm:flex-col max-sm:h-fit max-sm:items-center max-sm:gap-14" >
-      <section className="w-72 flex flex-col justify-between h-full max-sm:gap-4 // max-sm:w-full max-sm:px-8">
+    <main className="flex flex-row w-full py-8 bg-white shadow-inner h-72 justify-evenly / max-sm:flex-col max-sm:h-fit max-sm:items-center max-sm:gap-14" >
+      <section className="flex flex-col justify-between h-full w-72 max-sm:gap-4 // max-sm:w-full max-sm:px-8">
         <div className="flex flex-row items-center gap-x-3">
           <Image alt='' src='/logo-b.svg' width={1} height={1} className="w-12 / max-sm:w-8"/>
           <h1 className="text-2xl font-semibold text-41 / max-sm:text-xl">Ankasa</h1>
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         
 
-        <div className="flex flex-row gap-1 mt-auto py-4">
+        <div className="flex flex-row gap-1 py-4 mt-auto">
           <Image alt='' src='/icon-location.svg' width={24} height={24} />
           <span className=''>Jakarta, Indonesia</span>
         </div>

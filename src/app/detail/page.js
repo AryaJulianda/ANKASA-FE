@@ -76,34 +76,34 @@ const Detail = ({searchParams}) => {
       {loading ? <Bars width='100px' height='auto' color='#2395FF' wrapperClass='flex justify-center items-center w-screen h-screen'/> : <>
       <main className='pt-28 bg-[#F5F6FA] // max-xl:pt-20 // max-sm:pt-10'>
         {/* bluebox */}
-        <div className='bg-primary py-10 px-16 flex flex-row items-center rounded-b-3xl shadow-2xl h-44 absolute right-0 left-0 w-full // max-sm:rounded-b-2xl max-sm:h-28'>
+        <div className='absolute left-0 right-0 flex flex-row items-center w-full px-16 py-10 shadow-2xl bg-primary rounded-b-3xl h-44 // max-sm:rounded-b-2xl max-sm:h-28'>
         </div>
 
         {/* main */}
-        <div className='w-full px-16 py-5 flex flex-row gap-6 z-10 relative // max-xl:px-8 max-xl:gap-3 // max-sm:flex-col-reverse max-sm:px-4'>
+        <div className='relative z-10 flex flex-row w-full gap-6 px-16 py-5 // max-xl:px-8 max-xl:gap-3 max-sm:flex-col-reverse max-sm:px-4'>
           {/* Details */}
           <div className=' w-[70%] py-5 // max-sm:w-full'>
             {/* Person Details */}
             <div className='flex flex-col'>
-              <h2 className='font-semibold text-2xl text-white // max-sm:text-primary'>Contact Person Details</h2>
-              <div className='w-full px-7 py-7 my-6 bg-white rounded-xl shadow-xl // max-xl:px-5 // max-sm:px-4 max-sm:py-4'>
+              <h2 className='text-2xl font-semibold text-white // max-sm:text-primary'>Contact Person Details</h2>
+              <div className='w-full my-6 bg-white shadow-xl px-7 py-7 rounded-xl // max-xl:px-5 max-sm:px-4 max-sm:py-4'>
                 <form className='flex flex-col gap-5'>
                   <div>
-                    <label htmlFor="name" className='block text-primary text-sm px-4'>Full Name</label>
+                    <label htmlFor="name" className='block px-4 text-sm text-primary'>Full Name</label>
                     <input 
                       type="text" name="name" id='name' placeholder='insert your full name' 
-                      className='border-b-2 text-black p-4 text-base focus:outline-none focus:border-primary w-full'
+                      className='w-full p-4 text-base text-black border-b-2 focus:outline-none focus:border-primary'
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className='block text-primary text-sm px-4'>Email</label>
+                    <label htmlFor="email" className='block px-4 text-sm text-primary'>Email</label>
                     <input 
                       type="text" name="email" id='email' placeholder='insert your email address'
-                      className='border-b-2 text-black p-4 text-base focus:outline-none focus:border-primary w-full'
+                      className='w-full p-4 text-base text-black border-b-2 focus:outline-none focus:border-primary'
                     />         
                   </div>
                   <div>
-                    <label htmlFor="name" className='block text-primary text-sm px-4'>Phone Number</label>
+                    <label htmlFor="name" className='block px-4 text-sm text-primary'>Phone Number</label>
                     <PhoneInput
                       country={'id'}
                       containerClass='p-4 border-b focus:border-primary'
@@ -111,7 +111,7 @@ const Detail = ({searchParams}) => {
                       buttonStyle={{border:'none',backgroundColor:'white'}}
                     />      
                   </div>
-                  <div className='flex flex-row gap-4 py-4 px-5 bg-red-100 rounded-xl'>
+                  <div className='flex flex-row gap-4 px-5 py-4 bg-red-100 rounded-xl'>
                     <Image alt='' src='/warning.svg' width={24} height={24}></Image>
                     <p className='text-[#595959] text-sm font-semibold'>Make sure the customer data is correct!</p>
                   </div>
@@ -121,13 +121,13 @@ const Detail = ({searchParams}) => {
             {/* Passengger Detail */}
             <div className='flex flex-col'>
               {/* header */}
-              <h2 className='font-semibold text-2xl text-black'>Passengger Details</h2>
+              <h2 className='text-2xl font-semibold text-black'>Passengger Details</h2>
               {/* form */}
-              <div className='w-full px-7 py-8 my-6 bg-white rounded-xl shadow-xl // max-xl:px-5 // max-sm:px-4 max-sm:py-4 '>
+              <div className='w-full py-8 my-6 bg-white shadow-xl px-7 rounded-xl // max-xl:px-5 max-sm:px-4 max-sm:py-4 '>
                 <form className='flex flex-col gap-5'>
 
                   {/* same contact toggle */}
-                  <div className='flex flex-row gap-4 py-4 px-5 bg-sky-100 rounded-xl justify-between // max-sm:flex-col'>
+                  <div className='flex flex-row justify-between gap-4 px-5 py-4 bg-sky-100 rounded-xl // max-sm:flex-col'>
                     <div className='flex flex-row gap-3'>                     
                       <p className='text-[#595959] text-sm font-semibold '>Passenger</p>   
                       <p className='text-[#595959] text-sm font-semibold '>:</p>   
@@ -154,10 +154,10 @@ const Detail = ({searchParams}) => {
                   <p className='text-[#000] text-base font-semibold mx-3'>Passengger 1</p>
                   {/* Title */}
                   <div>
-                    <label htmlFor="title1" className='block text-primary text-sm px-4'>Title</label>
+                    <label htmlFor="title1" className='block px-4 text-sm text-primary'>Title</label>
                     <select 
                       name="title1" id="title1" value={passenger.title1} onChange={handleChangePassenger}
-                      className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'
+                      className='w-full px-3 py-4 border-b-2 focus:outline-none focus:border-primary'
                     >
                       <option value=''>Select Title</option>
                       <option value="Mr">Mr.</option>
@@ -167,17 +167,17 @@ const Detail = ({searchParams}) => {
 
                   {/* full name */}
                   <div>
-                    <label htmlFor="fullname1" className='block text-primary text-sm px-4'>Full Name</label>
+                    <label htmlFor="fullname1" className='block px-4 text-sm text-primary'>Full Name</label>
                     <input 
                       value={passenger.fullname1} onChange={handleChangePassenger}
                       type="text" name="fullname1" id='fullname1' placeholder='insert passenger full name' 
-                      className='border-b-2 text-black p-4 text-base focus:outline-none focus:border-primary w-full' required
+                      className='w-full p-4 text-base text-black border-b-2 focus:outline-none focus:border-primary' required
                     />
                   </div>
 
                   {/* Nationallity */}
                   <div>
-                    <label htmlFor="nationality1" className='block text-primary text-sm px-4'>Nationality</label>
+                    <label htmlFor="nationality1" className='block px-4 text-sm text-primary'>Nationality</label>
                     <SelectCountry name={'nationality1'} value={passenger.nationality1} onChange={handleChangePassenger}/>
                   </div>          
 
@@ -186,10 +186,10 @@ const Detail = ({searchParams}) => {
                   <p className='text-[#000] text-base font-semibold mx-3 mt-5'>Passengger 2</p>
                   {/* Title */}
                   <div>
-                    <label htmlFor="title2" className='block text-primary text-sm px-4'>Title</label>
+                    <label htmlFor="title2" className='block px-4 text-sm text-primary'>Title</label>
                     <select 
                       value={passenger.title2} onChange={handleChangePassenger}
-                      name="title2" id="title2" className='w-full focus:outline-none px-3 border-b-2 py-4 focus:border-primary'
+                      name="title2" id="title2" className='w-full px-3 py-4 border-b-2 focus:outline-none focus:border-primary'
                     >
                       <option value=''>Select Title</option>
                       <option value="Mr">Mr.</option>
@@ -199,17 +199,17 @@ const Detail = ({searchParams}) => {
 
                   {/* full name */}
                   <div>
-                    <label htmlFor="fullname2" className='block text-primary text-sm px-4'>Full Name</label>
+                    <label htmlFor="fullname2" className='block px-4 text-sm text-primary'>Full Name</label>
                     <input 
                       value={passenger.fullname2} onChange={handleChangePassenger}
                       type="text" name="fullname2" id='fullname2' placeholder='insert passenger full name' 
-                      className='border-b-2 text-black p-4 text-base focus:outline-none focus:border-primary w-full'
+                      className='w-full p-4 text-base text-black border-b-2 focus:outline-none focus:border-primary'
                     />
                   </div>
 
                   {/* Nationallity */}
                   <div>
-                    <label htmlFor="nationality2" className='block text-primary text-sm px-4'>Nationality</label>
+                    <label htmlFor="nationality2" className='block px-4 text-sm text-primary'>Nationality</label>
                     <SelectCountry name={'nationality2'} value={passenger.nationality2} onChange={handleChangePassenger}/>
                   </div></>)}                  
 
@@ -220,22 +220,22 @@ const Detail = ({searchParams}) => {
             {/* Insurance */}
             <div className='flex flex-col'>
               {/* header */}
-              <h2 className='font-semibold text-2xl text-black'>Insurance</h2>
+              <h2 className='text-2xl font-semibold text-black'>Insurance</h2>
               {/* form */}
-              <div className='w-full px-7 py-8 my-6 bg-white rounded-xl shadow-xl // max-xl:px-5 // max-sm:px-4 max-sm:py-4'>
+              <div className='w-full py-8 my-6 bg-white shadow-xl px-7 rounded-xl // max-xl:px-5 max-sm:px-4 max-sm:py-4'>
                 <form className='flex flex-col gap-5'>
 
                   {/* insurence check */}
                   <div className='flex flex-col'>
-                    <div className='flex flex-row w-full border-b-2 pb-4'>
+                    <div className='flex flex-row w-full pb-4 border-b-2'>
                       <input 
                         onChange={handleInsuranceChange} checked={insuranceChecked}
                         type="checkbox" name='insurance' id='insurance' className='w-4'
                       />
-                      <label htmlFor='insurance' className=' text-black text-lg font-semibold px-4'>Travel Insurance</label>
-                      <p className='text-primary font-bold text-lg text-right flex-1'>$ 2,00<span className='text-[#979797] font-semibold text-sm'>/pax</span></p>
+                      <label htmlFor='insurance' className='px-4 text-lg font-semibold text-black '>Travel Insurance</label>
+                      <p className='flex-1 text-lg font-bold text-right text-primary'>$ 2,00<span className='text-[#979797] font-semibold text-sm'>/pax</span></p>
                     </div>
-                    <p className='text-sm font-medium pt-5'>Get travel compensation up to $ 10.000,00</p>
+                    <p className='pt-5 text-sm font-medium'>Get travel compensation up to $ 10.000,00</p>
                   </div>
                                 
                 </form>
@@ -258,7 +258,7 @@ const Detail = ({searchParams}) => {
               className=' mb-10 -mt-5 text-white bg-[#FF7F23] font-bold text-lg py-4 px-14 rounded-xl shadow-lg hover:shadow-[#FF7F23]'>Pay in other time</button>
             <button 
               onClick={handleSubmit}
-              className=' mb-10 -mt-5 text-white bg-primary font-bold text-lg py-4 px-14 rounded-xl shadow-lg hover:shadow-primary'>Procesed to Payment</button>
+              className='py-4 mb-10 -mt-5 text-lg font-bold text-white shadow-lg bg-primary px-14 rounded-xl hover:shadow-primary'>Procesed to Payment</button>
           {/* </Link> */}
         </div>
         

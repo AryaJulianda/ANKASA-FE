@@ -44,12 +44,6 @@ const Filter = ({fetchFilteredData}) => {
   };
   
 
-
-  // console.log('facilities=>',facilities)
-  // console.log('airlineId=>',airlineId)
-  // console.log('max=>',maxPrice)
-  // console.log('min=>',minPrice)
-
   const handleSubmit = () => {
     fetchFilteredData(facilities,minPrice,maxPrice,airlineId)
     // console.log({facilities,minPrice,maxPrice,airlineId})
@@ -59,30 +53,12 @@ const Filter = ({fetchFilteredData}) => {
     <div>
       {/* head filter */}
       <div className='flex flex-row justify-between'>
-        <h2 className='text-white font-semibold text-2xl / max-xl:text-xl'>Filter</h2>
+        <h2 className='text-2xl font-semibold text-white / max-xl:text-xl'>Filter</h2>
         <button className='text-white rounded-lg px-2 bg-[#4FCF4D] text-sm font-semibold max-sm:inline-block hover:bg-white hover:text-[#4FCF4D]' onClick={handleSubmit}>Apply Filter</button>
       </div> 
       {/* filter column */}
-      <div className='w-full px-7 my-5 bg-white rounded-xl shadow-xl / max-xl:px-5'>
+      <div className='w-full my-5 bg-white shadow-xl px-7 rounded-xl / max-xl:px-5'>
         
-        {/* <div className='border-b'>transit
-          <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openTransit,setOpenTransit)}>
-            <p className='text-base font-semibold'>Transit</p>
-            <Image alt='' src='/arrow.svg' width={10} height={10} className={openTransit ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
-          </button>
-          {openTransit && 
-          <div className='flex flex-col'>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
-              <label className='text-sm' htmlFor='direct' >Direct</label><input type="checkbox" name="" id="direct" className='w-4 h-4'/>
-            </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
-              <label className='text-sm' htmlFor='transit' >Transit</label><input type="checkbox" name="" id="transit" className='w-4 h-4'/>
-            </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
-              <label className='text-sm' htmlFor='transit2' >Transit 2+</label><input type="checkbox" name="" id="transit2" className='w-4 h-4'/>
-            </div>
-          </div>}
-        </div> */}
         
         <div className='border-b'>{/* Facilities */}
           <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openFacilities,setOpenFacilities)}>
@@ -91,62 +67,17 @@ const Filter = ({fetchFilteredData}) => {
           </button>
           {openFacilities && 
           <div className='flex flex-col'>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
+            <div className='flex flex-row items-center justify-between w-full mb-5'>
               <label className='text-sm' htmlFor='baggage' >Baggage</label><input type="checkbox" name="" id="baggage" className='w-4 h-4' value='1' onChange={handleChangeFacilities} checked={facilities.includes('1')} />
             </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
+            <div className='flex flex-row items-center justify-between w-full mb-5'>
               <label className='text-sm' htmlFor='meal' >Meal</label><input type="checkbox" name="" id="meal" className='w-4 h-4' value='2' onChange={handleChangeFacilities} checked={facilities.includes('2')} />
             </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
+            <div className='flex flex-row items-center justify-between w-full mb-5'>
               <label className='text-sm' htmlFor='wifi' >Wi-fi</label><input type="checkbox" name="" id="wifi" className='w-4 h-4' value='3' onChange={handleChangeFacilities} checked={facilities.includes('3')} />
             </div>
           </div>}
         </div>
-
-        {/* Departure Time */}
-        {/* <div className='border-b'>
-          <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openDepTime,setOpenDepTime)}>
-            <p className='text-base font-semibold'>Departure Time</p>
-            <Image alt='' src='/arrow.svg' width={10} height={10} className={openDepTime ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
-          </button>
-          {openDepTime && 
-          <div className='flex flex-col'>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
-              <label className='text-sm' htmlFor='0-6' >00:00 - 06:00</label><input type="checkbox" name="" id="0-6" className='w-4 h-4'/>
-            </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
-              <label className='text-sm' htmlFor='6-12' >06:00 - 12:00</label><input type="checkbox" name="" id="6-12" className='w-4 h-4'/>
-            </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
-              <label className='text-sm' htmlFor='12-18' >12:00 - 18:00</label><input type="checkbox" name="" id="12-18" className='w-4 h-4'/>
-            </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
-              <label className='text-sm' htmlFor='18-24' >18:00 - 24:00</label><input type="checkbox" name="" id="18-24" className='w-4 h-4'/>
-            </div>
-          </div>}
-        </div> */}
-        {/* Time Arrived */}
-        {/* <div className='border-b'>
-          <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openAriveTime,setOpenAriveTime)}>
-            <p className='text-base font-semibold'>Time Arrived</p>
-            <Image alt='' src='/arrow.svg' width={10} height={10} className={openAriveTime ? '-rotate-90 w-2.5' : 'rotate-90 w-2.5'}></Image>
-          </button>
-          {openAriveTime && 
-          <div className='flex flex-col'>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
-              <label className='text-sm' htmlFor='0-6' >00:00 - 06:00</label><input type="checkbox" name="" id="0-6" className='w-4 h-4'/>
-            </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
-              <label className='text-sm' htmlFor='6-12' >06:00 - 12:00</label><input type="checkbox" name="" id="6-12" className='w-4 h-4'/>
-            </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
-              <label className='text-sm' htmlFor='12-18' >12:00 - 18:00</label><input type="checkbox" name="" id="12-18" className='w-4 h-4'/>
-            </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
-              <label className='text-sm' htmlFor='18-24' >18:00 - 24:00</label><input type="checkbox" name="" id="18-24" className='w-4 h-4'/>
-            </div>
-          </div>}
-        </div> */}
 
         <div className='border-b'>{/* Airlines */}
           <button className='flex flex-row justify-between w-full py-5 pr-[3px] / max-xl:py-4' onClick={()=>handleOpenDropdown(openAirlines,setOpenAirlines)}>
@@ -155,19 +86,19 @@ const Filter = ({fetchFilteredData}) => {
           </button>
           {openAirlines && 
           <div className='flex flex-col'>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
+            <div className='flex flex-row items-center justify-between w-full mb-5'>
               <label className='text-sm' htmlFor='garudaId' >Garuda Indonesia</label><input type="checkbox" name="" id="garudaId" className='w-4 h-4' value='2' onChange={handleChangeAirlineId} checked={airlineId.includes('2')}/>
             </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
+            <div className='flex flex-row items-center justify-between w-full mb-5'>
               <label className='text-sm' htmlFor='airAsia' >Air Asia</label><input type="checkbox" name="" id="airAsia" className='w-4 h-4' value='4' onChange={handleChangeAirlineId} checked={airlineId.includes('4')}/>
             </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
+            <div className='flex flex-row items-center justify-between w-full mb-5'>
               <label className='text-sm' htmlFor='lionAir' >Lion Air</label><input type="checkbox" name="" id="lionAir" className='w-4 h-4' value='3' onChange={handleChangeAirlineId} checked={airlineId.includes('3')}/>
             </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
+            <div className='flex flex-row items-center justify-between w-full mb-5'>
               <label className='text-sm' htmlFor='sgp' >Singapore Airlines</label><input type="checkbox" name="" id="sgp" className='w-4 h-4' value='1' onChange={handleChangeAirlineId} checked={airlineId.includes('1')}/>
             </div>
-            <div className='flex flex-row justify-between w-full items-center mb-5'>
+            <div className='flex flex-row items-center justify-between w-full mb-5'>
               <label className='text-sm' htmlFor='citilink' >Citilink</label><input type="checkbox" name="" id="citilink" className='w-4 h-4' value='5' onChange={handleChangeAirlineId} checked={airlineId.includes('5')}/>
             </div>
           </div>}
@@ -181,8 +112,8 @@ const Filter = ({fetchFilteredData}) => {
           {openTicketPrice && 
           <div className='flex flex-col'>
             <div className='flex flex-row justify-between'>
-              <p className='color-41 text-xs'>Lowest</p>
-              <p className='color-41 text-xs'>Highest</p>
+              <p className='text-xs color-41'>Lowest</p>
+              <p className='text-xs color-41'>Highest</p>
             </div>
             <MultiRangeSlider
               min={0}

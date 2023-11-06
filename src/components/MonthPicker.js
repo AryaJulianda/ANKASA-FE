@@ -3,7 +3,7 @@ import React from "react"
 const MonthPicker = (props) => {
   return (
     <div className="">
-      <select name="" id="month" className='p-4 focus:outline-none border-b-2 focus:border-primary mr-4'>
+      <select name="" id="month" className='p-4 mr-4 border-b-2 focus:outline-none focus:border-primary'>
         <option>Mounth</option>
         <option value="January">January</option>
         <option value="February">February</option>
@@ -18,7 +18,7 @@ const MonthPicker = (props) => {
         <option value="November">November</option>
         <option value="December">December</option>
       </select>    
-      <select name="" id="year" className='p-4 focus:outline-none border-b-2 focus:border-primary'>
+      <select name="" id="year" className='p-4 border-b-2 focus:outline-none focus:border-primary'>
         <option>Year</option>
         {Array.from({ length: 8 }, (_, index) => {
           const year = 2023 + index;

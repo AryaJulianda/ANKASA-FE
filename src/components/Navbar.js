@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="fixed top-0 left-0 right-0 z-[9999]">
-        <main className="flex bg-white items-center py-8 justify-around shadow-lg / max-xl:py-4 / max-sm:py-4 max-sm:justify-between max-sm:px-5">
+        <main className="flex items-center justify-around py-8 bg-white shadow-lg / max-xl:py-4 max-sm:py-4 max-sm:justify-between max-sm:px-5">
 
           <section>
             <div className="flex flex-row items-center gap-x-3">
@@ -55,17 +55,17 @@ const Navbar = () => {
           </section>
 
           <section className="flex flex-row items-center gap-12 / max-sm:hidden ">
-            <div className="bg-gray-100 flex flex-row items-center h-fit px-5 py-3 gap-x-3 w-64 rounded-xl shadow-md">
+            <div className="flex flex-row items-center w-64 px-5 py-3 bg-gray-100 shadow-md h-fit gap-x-3 rounded-xl">
               <Image alt="" src='/search.svg' width={1} height={1} className="w-6"/>
-              <input type="text" onClick={toggleFindTicket} placeholder="Where you want to go?" className="text-sm text-gray-500 focus:outline-none bg-transparent"/>
+              <input type="text" onClick={toggleFindTicket} placeholder="Where you want to go?" className="text-sm text-gray-500 bg-transparent focus:outline-none"/>
             </div>  
 
             <div className='flex flex-row gap-x-12'>
               <div> 
-                <button className="text-base font-bold text-41 border-b-4 hover:border-primary" onClick={toggleFindTicket}>Find Ticket</button>
+                <button className="text-base font-bold border-b-4 text-41 hover:border-primary" onClick={toggleFindTicket}>Find Ticket</button>
               </div>
               <div> 
-                <button className="text-base font-bold text-41 border-b-4 hover:border-primary" onClick={toggleMyBooking}>My Booking</button>
+                <button className="text-base font-bold border-b-4 text-41 hover:border-primary" onClick={toggleMyBooking}>My Booking</button>
               </div>
             </div>
           </section>
@@ -83,19 +83,19 @@ const Navbar = () => {
           </section>) 
           :(<button 
               onClick={()=> router.push('/auth/login')}
-              className="bg-primary text-base font-bold text-white py-3 px-10 rounded-xl hover:text-primary hover:bg-white border-2 border-white hover:border-primary shadow-primary / max-sm:hidden">
+              className="px-10 py-3 text-base font-bold text-white border-2 border-white bg-primary rounded-xl hover:text-primary hover:bg-white hover:border-primary shadow-primary / max-sm:hidden">
             Sing In
           </button>)}
 
-          <section className="max-sm:flex flex-row align-center gap-4 hidden">
+          <section className="flex-row hidden gap-4 max-sm:flex align-center">
             <Image alt="" src='/search.svg' width={1} height={1} className="w-5" onClick={toggleSearch}/>
             <Image alt="" src='/hamburger.svg' id="sideBarButton" width={1} height={1} className="w-5" onClick={toggleSidebar}/>
           </section>
           
           {searchVisible &&(
-            <div className="bg-gray-100 flex flex-row items-center h-fit px-4 py-3 gap-x-3 w-64 rounded-xl shadow-md absolute">
+            <div className="absolute flex flex-row items-center w-64 px-4 py-3 bg-gray-100 shadow-md h-fit gap-x-3 rounded-xl">
               <Image alt="" src='/search.svg' width={1} height={1} className="w-6"/>
-              <input type="text" placeholder="Where you want to go?" className="text-sm text-gray-500 focus:outline-none bg-transparent"/>
+              <input type="text" placeholder="Where you want to go?" className="text-sm text-gray-500 bg-transparent focus:outline-none"/>
             </div>)} 
 
         </main>
@@ -104,16 +104,16 @@ const Navbar = () => {
         {sidebarVisible && (
         <div className='w-2/3 bg-white fixed z-[99999] top-0 bottom-0 right-0 shadow-2xl pt-16'>
           <div className='flex flex-col items-center'>
-            <div className="border-b-2 border-gray-200 w-full text-center p-5"> 
+            <div className="w-full p-5 text-center border-b-2 border-gray-200"> 
               <button className={findTicketVisible ? "text-base font-bold text-primary" : "text-base font-bold text-41"} onClick={toggleFindTicket}>Find Ticket</button>
             </div>
-            <div className="border-b-2 border-gray-200 w-full text-center p-5"> 
+            <div className="w-full p-5 text-center border-b-2 border-gray-200"> 
               <button className="text-base font-bold text-41">My Booking</button>
             </div>
-            <div className="border-b-2 border-gray-200 w-full text-center p-5"> 
+            <div className="w-full p-5 text-center border-b-2 border-gray-200"> 
               <button className="text-base font-bold text-41">Profile</button>
             </div>
-            <div className="border-b-2 border-gray-200 w-full text-center p-5"> 
+            <div className="w-full p-5 text-center border-b-2 border-gray-200"> 
               <button className="text-base font-bold text-red-500" onClick={handleLogout}>Logout</button>
             </div>
           </div>
@@ -122,15 +122,15 @@ const Navbar = () => {
 
       {/* FIND TICKET */}
       {findTicketVisible && (
-      <div className='fixed top-24 right-96 flex flex-col w-96 bg-white shadow-2xl px-10 py-8 gap-4 rounded-xl my-10 mx-auto / max-xl:top-16 max-xl:right-60 max-xl:py-8 max-xl:px-6 max-xl:h-3/4 max-xl:overflow-y-scroll / max-sm:top-24 max-sm:right-0 max-sm:left-0 max-sm:w-5/6 z-50'>
+      <div className='fixed z-50 flex flex-col gap-4 px-10 py-8 mx-auto my-10 bg-white shadow-2xl top-24 right-96 w-96 rounded-xl / max-xl:top-16 max-xl:right-60 max-xl:py-8 max-xl:px-6 max-xl:h-3/4 max-xl:overflow-y-scroll max-sm:top-24 max-sm:right-0 max-sm:left-0 max-sm:w-5/6'>
         <p className="text-base font-medium">Hey, <br/>Where you want to go?</p>
         
         <button className="flex flex-row justify-between w-full">
-          <p className="text-base text-primary font-semibold">Recently Searched</p>
+          <p className="text-base font-semibold text-primary">Recently Searched</p>
           <Image alt="" src='/arrow.svg' width={10} height={10}/>
         </button>
 
-        <div className="flex flex-row bg-white shadow-lg rounded-xl justify-between px-5 py-3">
+        <div className="flex flex-row justify-between px-5 py-3 bg-white shadow-lg rounded-xl">
           <div className="text-left">
             <p className="text-sm text-gray-500">From</p>
             <h1 className="text-xl font-semibold text-black">Medan</h1>
@@ -145,32 +145,32 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-row justify-between">
-          <button className="bg-primary rounded-md flex flex-row justify-center py-3 px-6 gap-3 items-center / max-sm:py-2 max-sm:px-3">
+          <button className="flex flex-row items-center justify-center gap-3 px-6 py-3 rounded-md bg-primary / max-sm:py-2 max-sm:px-3">
             <Image src='/oneway.svg' width={18} height={18} alt="cek"/>
             <p className="text-sm font-semibold text-white">One way</p>
           </button>
-          <button className="bg-gray-200 rounded-md flex flex-row justify-center py-3 px-6 gap-3 items-center / max-sm:py-2 max-sm:px-3">
+          <button className="flex flex-row items-center justify-center gap-3 px-6 py-3 bg-gray-200 rounded-md / max-sm:py-2 max-sm:px-3">
             <Image alt="" src='/roundtrip.svg' width={18} height={18}/>
             <p className="text-sm font-semibold text-gray-700">Round trip</p>
           </button>
         </div>
         
         <div>
-          <h5 className="mb-2 text-sm text-gray-500 font-medium">Departure</h5>
-          <button className="flex flex-row rounded-xl border border-gray-200 w-full px-5 py-4 justify-between">
+          <h5 className="mb-2 text-sm font-medium text-gray-500">Departure</h5>
+          <button className="flex flex-row justify-between w-full px-5 py-4 border border-gray-200 rounded-xl">
             <p className="text-sm font-bold">Monday, 20 July 2020</p>
             <Image alt="" src='/arrow.svg' width={10} height={10}/>
           </button>
         </div>
 
         <div>
-          <h5 className="mb-2 text-sm text-gray-500 font-medium">How many person</h5>
+          <h5 className="mb-2 text-sm font-medium text-gray-500">How many person</h5>
           <div className="flex flex-row gap-4">
-            <button className="flex flex-row rounded-md border border-gray-200 w-full justify-between p-5 py-3">
+            <button className="flex flex-row justify-between w-full p-5 py-3 border border-gray-200 rounded-md">
               <p className="text-sm font-bold">2 Child</p>
               <Image alt="" src='/arrow.svg' width={10} height={10}/>
             </button>
-            <button className="flex flex-row rounded-md border border-gray-200 w-full justify-between p-5 py-3">
+            <button className="flex flex-row justify-between w-full p-5 py-3 border border-gray-200 rounded-md">
               <p className="text-sm font-bold ">2 Adult</p>
               <Image alt="" src='/arrow.svg' width={10} height={10}/>
             </button>
@@ -178,8 +178,8 @@ const Navbar = () => {
         </div>
 
         <div>
-          <h5 className="mb-2 text-sm text-gray-500 font-medium">Which class do you want?</h5>
-          <div className="flex flex-row justify-between w-full items-center">
+          <h5 className="mb-2 text-sm font-medium text-gray-500">Which class do you want?</h5>
+          <div className="flex flex-row items-center justify-between w-full">
             <div className="flex flex-row items-center gap-1">
               <input type="radio" id="economy" name="class" value="economy" />
               <label for="economy" className="text-sm font-bold">Economy</label>
@@ -195,7 +195,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <button className="bg-primary rounded-xl flex flex-row justify-between items-center px-9 py-4 mt-3">
+        <button className="flex flex-row items-center justify-between py-4 mt-3 bg-primary rounded-xl px-9">
           <p className="text-lg font-bold text-white">SEARCH FLIGHT</p>
           <Image alt="" src='/arrow-w.svg' width={10} height={10}/>
         </button>
